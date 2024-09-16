@@ -1,0 +1,193 @@
+@use '../variables/_colors' as *;
+@use '../mixins/mixins' as *;
+
+.register-form {
+	max-width: 613px;
+    margin: 0 auto 154px;
+
+    @include breakpointUi(lt-md) {
+        padding: 0 10px;
+    }
+
+    &__group {
+        margin-bottom: 10px;
+
+        &_indent {
+            margin-bottom: 40px; 
+
+            @include breakpointUi(lt-md) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__help-block {
+        @include text('background-red', 'sm');
+        margin: 8px 0 0 21px;
+        display: block;
+    }
+
+    &__field {
+        border: 1px solid map-get($colors, 'border-color');
+        background: map-get($colors, 'main-white');
+        height: 60px;
+        width: 100%;
+        outline: none;
+        box-shadow: none;
+        @include text('main', 'md');
+        padding: 10px 20px;
+
+        &::-webkit-input-placeholder { color: map-get($colors, 'border-color'); }
+        &:-ms-input-placeholder { color: map-get($colors, 'border-color'); }
+        &::-ms-input-placeholder { color: map-get($colors, 'border-color'); }
+        &::-moz-placeholder { color: map-get($colors, 'border-color'); }
+        &::placeholder { color: map-get($colors, 'border-color');}
+
+        &:focus, &:hover {
+            border: 1px solid map-get($colors, 'main');
+        }
+
+        &_error {
+            color: map-get($colors, 'background-red');
+            border: 1px solid currentColor;
+
+            &:focus, &:hover {
+                color: map-get($colors, 'background-red');
+                border: 1px solid currentColor;
+            }
+        }
+
+        &_success {
+            color: map-get($colors, 'main');
+            border: 1px solid currentColor;
+
+            &:focus, &:hover {
+                color: map-get($colors, 'main');
+                border: 1px solid currentColor;
+            }
+        }
+    }
+
+    &__button {
+        max-width: 198px;
+        min-height: 57px;
+        padding: 16px 45px;
+        display: block;
+		position: relative;
+        @include text('main-white', 'md');
+		text-align: center;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+        background: map-get($colors, 'background-red');
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+
+        &:hover {
+			box-shadow: 7px 7px 0px map-get($colors, 'dark-red');
+		}
+	
+		&:active {
+			box-shadow: none;
+			background: map-get($colors, 'dark-red');
+		}
+
+        @include breakpointUi(lt-md) {
+            width: 100%;
+            max-width: 613px;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        @include breakpointUi(lt-md) {
+            flex-direction: column;
+        }
+    }
+
+    .register-form-agree {
+        @include text('main', 'sm');
+        position: relative;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+
+        &__text {
+            margin-left: -5px;
+            margin-top: -2px;
+        }
+
+        &__checkbox {
+            opacity: 0;
+        }
+        
+        &__checkmark {
+            --size: 10px;
+            border: 1px solid map-get($colors, 'main');
+            width: var(--size);
+            height: var(--size);
+            border-radius: 0;
+            top: 0;
+            left: 0;
+            box-shadow: none;
+            position: absolute;
+        }
+
+        &:hover {
+            .register-form-agree__checkmark {
+                border: 1px solid map-get($colors, 'background-red');
+            }
+        }
+        
+        & input:checked ~ .register-form-agree {
+            &__checkmark {
+                border: 1px solid map-get($colors, 'background-red');
+
+                &::after {
+                    content: "";
+                    left: 50%;
+                    top: 50%;
+                    width: 4px;
+                    height: 4px;
+                    background: map-get($colors, 'background-red');
+                    display: block;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &__text_animated {
+            animation: change-color 2s;
+        }
+        
+    }
+}
+
+.success-message {
+    display: none;
+    gap: 15px;
+    margin-top: 22px;
+
+    &_visible {
+        display: flex;
+    }
+
+    &__icon {
+        --size: 24px;
+        width: var(--size);
+        height: var(--size);
+        flex: none;
+        margin-top: 3px;
+    }
+}
+
+@keyframes change-color {
+	0% {color: map-get($colors, 'main');}
+	50% {color: map-get($colors, 'background-red');}
+	100% {color: map-get($colors, 'main');}
+}
