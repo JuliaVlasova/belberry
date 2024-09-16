@@ -1,0 +1,51 @@
+﻿<div class="popup-overlay">
+    <div class="popup-window relative">
+        <svg class="popup-window__close">
+            <use xlink:href="#close-popup"></use>
+        </svg>
+        <div class="popup-form">
+            <div class="popup-form__title">Регистрация</div>
+            <div class="popup-form__form">
+                <form id="register-form" class="register-form" method="POST" action="">
+                    <div class="register-form__group">
+                        <div class="register-form__container">
+                            <input id="register-form-name" class="register-form__field" type="text" name="name"
+                                placeholder="ФИО" value="" required>
+                        </div>
+
+                        <div class="hidden">
+                            <span class="register-form__help-block"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="register-form__group">
+                        <div class="register-form__container">
+                            <input id="register-form-tel" class="register-form__field" name="tel"
+                                placeholder="Телефон" value="" type="tel" required>
+                        </div>
+                        <div class="hidden">
+                            <span class="register-form__help-block"></span>
+                        </div>
+                    </div>
+
+                    <input type="button" name="submit"
+                        class="register-form__button r-button register-form__button_disabled"
+                        value="Отправить заявку" id="register-form-button">
+
+                    <label for="register-form-input" class="register-form-agree">
+                        <input type="checkbox" id="register-form-input" name="agreement" value=""
+                            class="register-form-agree__checkbox">
+                        <span class="register-form-agree__checkmark"></span>
+                        <span class="register-form-agree__text">
+                            Отправляя сведения через электронную форму, вы даете согласие на обработку персональных
+                            данных, в том числе сбор, хранение и передачу третьим лицам представленной вами
+                            информации на условиях <a class="register-form-agree__link" href="#">Политики обработки
+                                персональных данных</a>.
+                        </span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
