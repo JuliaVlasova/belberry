@@ -6,6 +6,7 @@ const rename = require("gulp-rename");
 const minifyCSS = require("gulp-minify-css");
 const sass = require("gulp-sass")(require("sass"));
 const fileinclude = require("gulp-file-include");
+const htmlbeautify = require('gulp-html-beautify');
 
 function isJavaScript(file) {
   return file.extname === ".js";
@@ -31,7 +32,7 @@ function defaultTask(cb) {
   cb();
 }
 
-function build(cb) {
+function buildHtml(cb) {
     return src(["src/templates/index.html"])
       .pipe(
         fileinclude({
@@ -39,9 +40,9 @@ function build(cb) {
           basepath: "@file",
         })
       )
+      .pipe(htmlbeautify())
       .pipe(dest("./"));
   cb();
 }
 
-exports.build = build;
-exports.default = series(defaultTask, build);
+exports.default = series(defaultTask, buildHtml);

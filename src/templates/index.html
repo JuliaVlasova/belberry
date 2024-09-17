@@ -17,27 +17,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer="defer"></script>
 </head>
 
 <body>
     @@include('./popup.html')
     <div class="p-wrapper">
+        @@include('./panel.html')
         @@include('./nav.html')
-        
+
         <main>
             @@include('./first-screen.html')
-
-            <section class="p-intro">
-                <div class="p-intro__start">
-
-                </div>
-
-                <div class="p-intro__gallery">
-                    <a href="image-a.jpeg" data-fancybox data-caption="Single image">
-                        <img src="thumbnail-a.jpeg" />
-                    </a>
-                </div>
-            </section>
+            @@include('./section-2.html')
+            @@include('./section-3.html')
+            @@include('./section-4.html')
+            @@include('./section-5.html')
+            @@include('./section-6.html')
+            @@include('./section-7.html')
+            @@include('./section-8.html')
+            @@include('./section-9.html')
+            @@include('./section-10.html')
 
         </main>
 
@@ -211,11 +210,17 @@
     <script src="output/js/popup.min.js" type="text/javascript" defer="defer"></script>
 
     <!-- Swiper library -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
     <script src="output/js/swiper.min.js" type="text/javascript" defer="defer"></script>
 
     <!-- Fancybox -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer="defer"></script>
+    <script src="output/js/fancybox.min.js" type="text/javascript" defer="defer"></script>
+
+    <!-- Accordion -->
+    <script src="output/js/accordion.min.js" type="text/javascript" defer="defer"></script>
+    
+    
 </body>
 
 </html>

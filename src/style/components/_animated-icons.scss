@@ -28,13 +28,11 @@ $animation-time: .7s;
 		&:nth-child(odd) {
 			.animated-text__block {
 				&:nth-child(odd) {
-					color: map-get($colors, 'background-red');
-					text-shadow: -2px -2px 0 map-get($colors, 'main-white'), 2px -2px 0 map-get($colors, 'main-white'), -2px 2px 0 map-get($colors, 'main-white'), 2px 2px 0 map-get($colors, 'main-white');
-					letter-spacing: .06em;
+					
 				} 
 
 				&:nth-child(even) {
-					color: map-get($colors, 'main-white');
+					
 				}
 			}
 		}
@@ -42,13 +40,11 @@ $animation-time: .7s;
 		&:nth-child(even) {
 			.animated-text__block {
 				&:nth-child(odd) {
-					color: map-get($colors, 'main-white');
+					
 				}
 
 				&:nth-child(even) {
-					color: map-get($colors, 'background-red');
-					text-shadow: -2px -2px 0 map-get($colors, 'main-white'), 2px -2px 0 map-get($colors, 'main-white'), -2px 2px 0 map-get($colors, 'main-white'), 2px 2px 0 map-get($colors, 'main-white');
-					letter-spacing: .06em;
+					
 				}
 			}
 		}
@@ -131,7 +127,6 @@ $animation-time: .7s;
 	}
 
 	&__block {
-		font-family: 'tt_commons_trialbold_italic';
 		font-size: 120px;
 		line-height: 100px;
 		letter-spacing: 0.03em;

@@ -22,14 +22,14 @@
     }
 
     &__help-block {
-        @include text('background-red', 'sm');
+        @include text('color-red', 'xs');
         margin: 8px 0 0 21px;
         display: block;
     }
 
     &__field {
-        border: 1px solid map-get($colors, 'border-color');
-        background: map-get($colors, 'main-white');
+        border: 1px solid map-get($colors, 'color-darker-gray');
+        background: map-get($colors, 'color-white');
         height: 60px;
         width: 100%;
         outline: none;
@@ -37,22 +37,22 @@
         @include text('main', 'md');
         padding: 10px 20px;
 
-        &::-webkit-input-placeholder { color: map-get($colors, 'border-color'); }
-        &:-ms-input-placeholder { color: map-get($colors, 'border-color'); }
-        &::-ms-input-placeholder { color: map-get($colors, 'border-color'); }
-        &::-moz-placeholder { color: map-get($colors, 'border-color'); }
-        &::placeholder { color: map-get($colors, 'border-color');}
+        &::-webkit-input-placeholder { color: map-get($colors, 'color-darker-gray'); }
+        &:-ms-input-placeholder { color: map-get($colors, 'color-darker-gray'); }
+        &::-ms-input-placeholder { color: map-get($colors, 'color-darker-gray'); }
+        &::-moz-placeholder { color: map-get($colors, 'color-darker-gray'); }
+        &::placeholder { color: map-get($colors, 'color-darker-gray');}
 
         &:focus, &:hover {
             border: 1px solid map-get($colors, 'main');
         }
 
         &_error {
-            color: map-get($colors, 'background-red');
+            color: map-get($colors, 'color-red');
             border: 1px solid currentColor;
 
             &:focus, &:hover {
-                color: map-get($colors, 'background-red');
+                color: map-get($colors, 'color-red');
                 border: 1px solid currentColor;
             }
         }
@@ -78,19 +78,19 @@
 		text-align: center;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-        background: map-get($colors, 'background-red');
+        background: map-get($colors, 'color-red');
         border: none;
         outline: none;
         box-shadow: none;
         cursor: pointer;
 
         &:hover {
-			box-shadow: 7px 7px 0px map-get($colors, 'dark-red');
+			//box-shadow: 7px 7px 0px map-get($colors, 'dark-red');
 		}
 	
 		&:active {
 			box-shadow: none;
-			background: map-get($colors, 'dark-red');
+			//background: map-get($colors, 'dark-red');
 		}
 
         @include breakpointUi(lt-md) {
@@ -139,13 +139,13 @@
 
         &:hover {
             .register-form-agree__checkmark {
-                border: 1px solid map-get($colors, 'background-red');
+                border: 1px solid map-get($colors, 'color-red');
             }
         }
         
         & input:checked ~ .register-form-agree {
             &__checkmark {
-                border: 1px solid map-get($colors, 'background-red');
+                border: 1px solid map-get($colors, 'color-red');
 
                 &::after {
                     content: "";
@@ -153,7 +153,7 @@
                     top: 50%;
                     width: 4px;
                     height: 4px;
-                    background: map-get($colors, 'background-red');
+                    background: map-get($colors, 'color-red');
                     display: block;
                     position: absolute;
                     transform: translate(-50%, -50%);
@@ -188,6 +188,6 @@
 
 @keyframes change-color {
 	0% {color: map-get($colors, 'main');}
-	50% {color: map-get($colors, 'background-red');}
+	50% {color: map-get($colors, 'color-red');}
 	100% {color: map-get($colors, 'main');}
 }

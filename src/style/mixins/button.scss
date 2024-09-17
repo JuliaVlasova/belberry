@@ -1,0 +1,11 @@
+@use "../variables/heading" as *;
+
+// @extend %button;
+
+%button {
+  display: block;
+  text-align: center;
+  
+  padding: 8px 24px;
+  border-radius: 8px;
+}

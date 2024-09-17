@@ -2,22 +2,20 @@
 
 $heading-color: map-get($colors, "main");
 $heading-font-weight: 400;
-$heading-font-family: 'soviet_fontregular', Arial, sans-serif;
+$heading-font-family: 'stolzl-bold', Arial, sans-serif;
 
 $heading--font-size: (
-    "1": 100px,
-    "2": 60px,
-    "3": 40px,
+    "1": 88px,
+    "2": 80px,
+    "3": 48px,
+    "4": 32px,
+    "5": 28px,
 );
 
 $heading--line-heights: (
-    "1": 150px,
-    "2": 150px,
-    "3": 60px,
-);
-
-$headings--letter-spacing: (
-	"1": 0.02em,
-    "2": 0.02em,
-    "3": 0.02em,
+    "1": 97px,
+    "2": 80px,
+    "3": 58px,
+    "4": 38px,
+    "5": 34px,
 );
