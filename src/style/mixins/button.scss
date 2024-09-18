@@ -1,11 +1,18 @@
-@use "../variables/heading" as *;
+@use "../variables/colors" as *;
+@use "./text.scss" as *;
 
 // @extend %button;
 
 %button {
+  @include text("color-white", "sm");
   display: block;
   text-align: center;
-  
-  padding: 8px 24px;
+  background: map-get($colors, "color-blue");
+  padding: 10px 24px;
   border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten(map-get($colors, "color-blue"), 6%);
+  }
 }

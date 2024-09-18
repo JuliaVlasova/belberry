@@ -11,3 +11,11 @@
 	position: relative;
 }
 
+.text--color-blue {
+	color: map-get($colors, 'color-blue');
+}
+
+.text--color-gray {
+	color: map-get($colors, 'color-secondary-gray');
+}
+

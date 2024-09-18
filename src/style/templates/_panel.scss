@@ -1,2 +1,48 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+%block {
+  --size: 44px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 8px;
+  border: 1px solid map-get($colors, "color-neutral");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: map-get($colors, "color-white");
+}
+
+%image {
+  --size: 24px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.p-panel {
+  position: fixed;
+  right: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100px;
+
+  &__message-block {
+    @extend %block;
+  }
+
+  &__message {
+    @extend %image;
+  }
+
+  &__go-to-top-block {
+    @extend %block;
+  }
+
+  &__go-to-top {
+    @extend %image;
+  }
+}

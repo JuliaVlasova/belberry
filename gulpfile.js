@@ -7,6 +7,7 @@ const minifyCSS = require("gulp-minify-css");
 const sass = require("gulp-sass")(require("sass"));
 const fileinclude = require("gulp-file-include");
 const htmlbeautify = require('gulp-html-beautify');
+const replace = require('gulp-replace');
 
 function isJavaScript(file) {
   return file.extname === ".js";
@@ -40,6 +41,7 @@ function buildHtml(cb) {
           basepath: "@file",
         })
       )
+      .pipe(replace(/[\u200B-\u200D\uFEFF]/g, ""))
       .pipe(htmlbeautify())
       .pipe(dest("./"));
   cb();

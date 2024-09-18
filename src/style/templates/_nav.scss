@@ -1,112 +1,189 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
 
-nav {
-	
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: map-get($colors, "color-white");
+  padding: 15px 40px;
 
-	@include breakpointUi(lt-md) {
-		
-	}
+  &_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__tel {
+    @include text("color-blue", "md");
+    font-family: "stolzl-medium", Arial, sans-serif;
+  }
+
+  &__schedule {
+    @include text("main", "xs");
+  }
+
+  &__login {
+    --size: 44px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 8px;
+    background: map-get($colors, "color-gark-gray");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    @extend %button;
+  }
+
+  @include breakpointUi(lt-md) {
+  }
+}
+
+.p-logo {
+  &__svg {
+    width: 149px;
+    height: 54px;
+  }
 }
 
 .nav-mobile-burger {
-	--size: 40px;
-	position: relative;
-	width: var(--size);
-	height: var(--size);
-	cursor: pointer;
-	display: none;
+  --size: 40px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+  display: none;
 
-	@include breakpointUi(lt-md) {
-		display: block;
-	}
+  @include breakpointUi(lt-md) {
+    display: block;
+  }
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		width: 30px;
-		height: 3px;
-		right: 0;
-		margin-top: -4px;
-		transform: translate(0, -50%);
-		background: map-get($colors, 'main');
-	}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    right: 0;
+    margin-top: -4px;
+    transform: translate(0, -50%);
+    background: map-get($colors, "main");
+  }
 
-	&::after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		width: 10px;
-		height: 3px;
-		background: map-get($colors, 'main');
-		margin-top: 3px;
-		transform: translate(0, -50%);
-		right: 0;
-	}
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 3px;
+    background: map-get($colors, "main");
+    margin-top: 3px;
+    transform: translate(0, -50%);
+    right: 0;
+  }
 }
 
 .nav-buttons {
-	display: flex;
-	gap: 8px;
+  display: flex;
 
-	@include breakpointUi(lt-md) {
-		display: none;
-		position: fixed;
-		z-index: 70;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		flex-direction: column;
-		text-align: center;
-		gap: 0;
-		align-items: center;
-		justify-content: center;
-	}
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    line-height: 20px;
+    color: map-get($colors, "main");
 
-	&_opened {
-		@include breakpointUi(lt-md) {
-			display: flex;
-		}
-	}
+    &_row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+  }
 
-	&_close-mobile {
-		display: none;
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		--size: 40px;
-		width: var(--size);
-		height: var(--size);
-		cursor: pointer;
-		
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			width: 30px;
-			height: 3px;
-			left: 0;
-			transform: translate(0, -50%) rotate(-45deg);
-			background: map-get($colors, 'main');
-		}
+  &__arrow {
+    --size: 24px;
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(180deg);
+  }
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			width: 30px;
-			height: 3px;
-			left: 0;
-			transform: translate(0, -50%) rotate(45deg);
-			background: map-get($colors, 'main');
-		}
+  &__search-icon {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+  }
 
-		@include breakpointUi(lt-md) {
-			display: block;
-		}
-	}
+  &__user {
+    --size: 24px;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  @include breakpointUi(lt-md) {
+    display: none;
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_opened {
+    @include breakpointUi(lt-md) {
+      display: flex;
+    }
+  }
+
+  &_close-mobile {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 3px;
+      left: 0;
+      transform: translate(0, -50%) rotate(-45deg);
+      background: map-get($colors, "main");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 3px;
+      left: 0;
+      transform: translate(0, -50%) rotate(45deg);
+      background: map-get($colors, "main");
+    }
+
+    @include breakpointUi(lt-md) {
+      display: block;
+    }
+  }
 }
-
-

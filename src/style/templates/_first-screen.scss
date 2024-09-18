@@ -1,3 +1,85 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
 
+.first-screen {
+  background: map-get($colors, "color-gray");
+
+  &__container {
+    max-width: 965px;
+    margin: 0 auto 50px;
+  }
+
+  &__h1 {
+    text-align: center;
+    margin: 0 0 30px;
+    @include heading("1");
+    font-family: "stolzl-bold";
+  }
+
+  &__descr {
+    max-width: 653px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+    @include text("main", "md");
+  }
+
+  &__button {
+    @extend %button;
+    margin: 0 auto;
+    max-width: 226px;
+  }
+}
+
+.doctors-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__block {
+    flex: none;
+    position: relative;
+  }
+
+  &__text {
+    @include text("main", "xs");
+  }
+
+  &__info {
+    position: absolute;
+    left: 40%;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+  }
+}
+
+.p-slider {
+    max-width: 264px;
+    min-height: 157px;
+    padding: 20px 12px;
+    border-radius: 12px;
+    background: map-get($colors, "color-white");
+    text-align: center;
+
+    &__icon {
+        --size: 48px;
+        width: var(--size);
+        height: var(--size);
+        margin: 0 auto 12px;
+    }
+
+    &__text {
+
+    }
+}

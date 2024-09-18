@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: "stolzl-medium";
+  src: url("../../fonts/stolzl/stolzl_medium-webfont.woff2") format("woff2"),
+    url("../../fonts/stolzl/stolzl_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "stolzl-bold";
   src: url("../../fonts/stolzl/stolzl_bold-webfont.woff2") format("woff2"),
     url("../../fonts/stolzl/stolzl_bold-webfont.woff") format("woff");

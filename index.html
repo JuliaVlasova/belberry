@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    ﻿<div class="popup-overlay">
+    <div class="popup-overlay">
         <div class="popup-window relative">
             <svg class="popup-window__close">
                 <use xlink:href="#close-popup"></use>
@@ -67,21 +67,22 @@
             </div>
         </div>
     </div>
+
     <div class="p-wrapper">
-        ﻿<div class="p-panel">
+        <div class="p-panel">
             <div class="p-panel__message-block">
                 <svg class="p-panel__message">
                     <use xlink:href="#message"></use>
                 </svg>
             </div>
-            <div class="p-panel__go-to-top">
-                <svg class="p-panel__to-top">
+            <div class="p-panel__go-to-top-block">
+                <svg class="p-panel__go-to-top">
                     <use xlink:href="#to-top"></use>
                 </svg>
             </div>
         </div>
-        ﻿<nav class="header header_dark">
-            <div class="nav-left">
+        <nav class="nav">
+            <div class="nav_left">
                 <a href="#" class="p-logo">
                     <!-- Тут обычно стоит ссылка на домашнюю страницу -->
                     <svg class="p-logo__svg">
@@ -90,7 +91,12 @@
                 </a>
 
                 <div class="nav-buttons">
-                    <a href="#" class="nav-buttons__link">О нас</a>
+                    <a href="#" class="nav-buttons__link nav-buttons__link_row">
+                        <span>О нас</span>
+                        <svg class="nav-buttons__arrow">
+                            <use xlink:href="#to-top"></use>
+                        </svg>
+                    </a>
                     <a href="#" class="nav-buttons__link">Услуги</a>
                     <a href="#" class="nav-buttons__link">Врачи</a>
                     <a href="#" class="nav-buttons__link">Акции</a>
@@ -100,14 +106,14 @@
                     <a href="#" class="nav-buttons__link">Контакты</a>
                     <a href="#" class="nav-buttons__link nav-buttons__search">
                         <svg class="nav-buttons__search-icon">
-                            <use xlink:href="#search-icon"></use>
+                            <use xlink:href="#search"></use>
                         </svg>
                     </a>
                     <div class="nav-buttons_close-mobile"></div>
                 </div>
             </div>
 
-            <div class="nav-right">
+            <div class="nav_right">
                 <div class="nav__info">
                     <div class="nav__tel">+7 911 210 02 87</div>
                     <div class="nav__schedule">Ежедневно 8:00 - 20:00</div>
@@ -124,49 +130,51 @@
         </nav>
 
         <main>
-            ﻿<section class="first-screen">
-                <h1 class="first-screen__h1">
-                    <span>Ваше здоровье</span>
-                    <span>в надежных руках</span>
-                </h1>
-                <div class="first-screen__descr">
-                    Создаем комфортные условия для вашего лечения и восстановления, обеспечивая максимальную
-                    эффективность
-                    и удобство на каждом этапе.
+            <section class="first-screen">
+                <div class="first-screen__container">
+                    <h1 class="first-screen__h1">
+                        <span>Ваше здоровье</span>
+                        <span class="text--color-blue">в надежных руках</span>
+                    </h1>
+                    <div class="first-screen__descr">
+                        Создаем комфортные условия для вашего лечения и восстановления, обеспечивая максимальную
+                        эффективность
+                        и удобство на каждом этапе.
+                    </div>
+                    <a href="#" class="first-screen__button">Связаться с клиникой</a>
                 </div>
-                <a href="first-screen__button">Связаться с клиникой</a>
                 <div class="doctors-row">
                     <div class="doctors-row__inner">
                         <div class="doctors-row__block">
-                            <img class="lozad" data-src="src/images/i-vasiljeva@2x.png" alt="" width="" height="" class="doctors-row__image">
+                            <img src="src/images/i-vasiljeva@2x.png" alt="" width="188" height="330" class="doctors-row__image">
                             <div class="doctors-row__info">
                                 <div class="doctors-row__name">
                                     Ирина Васильва
                                 </div>
                                 <div class="doctors-row__text">
-                                    <span class="doctors-row__text_light">Стаж</span> 12 лет
+                                    <span class="text--color-gray">Стаж</span> 12 лет
                                 </div>
                             </div>
                         </div>
                         <div class="doctors-row__block">
-                            <img class="lozad" data-src="src/images/v-petrov@2x.png" alt="" width="" height="" class="doctors-row__image">
+                            <img src="src/images/v-petrov@2x.png" alt="" width="257" height="348" class="doctors-row__image">
                             <div class="doctors-row__info">
                                 <div class="doctors-row__name">
                                     Виталий Петров
                                 </div>
                                 <div class="doctors-row__text">
-                                    <span class="doctors-row__text_light">Стаж</span> 16 лет
+                                    <span class="text--color-gray">Стаж</span> 16 лет
                                 </div>
                             </div>
                         </div>
                         <div class="doctors-row__block">
-                            <img class="lozad" data-src="src/images/a-romanova@2x.png" alt="" width="" height="" class="doctors-row__image">
+                            <img src="src/images/a-romanova@2x.png" alt="" width="248" height="336" class="doctors-row__image">
                             <div class="doctors-row__info">
                                 <div class="doctors-row__name">
                                     Анастасия Романова
                                 </div>
                                 <div class="doctors-row__text">
-                                    <span class="doctors-row__text_light">Стаж</span> 8 лет
+                                    <span class="text--color-gray">Стаж</span> 8 лет
                                 </div>
                             </div>
                         </div>
@@ -204,42 +212,42 @@
                     </div>
                     <div class="doctors-row__inner">
                         <div class="doctors-row__block">
-                            <img class="lozad" data-src="src/images/m-pozharskaya@2x.png" alt="" width="" height="" class="doctors-row__image">
+                            <img src="src/images/m-pozharskaya@2x.png" alt="" width="246" height="354" class="doctors-row__image">
                             <div class="doctors-row__info">
                                 <div class="doctors-row__name">
                                     Мария Пожарская
                                 </div>
                                 <div class="doctors-row__text">
-                                    <span class="doctors-row__text_light">Стаж</span> 10 лет
+                                    <span class="text--color-gray">Стаж</span> 10 лет
                                 </div>
                             </div>
                         </div>
                         <div class="doctors-row__block">
-                            <img class="lozad" data-src="src/images/a-kirillova@2x.png" alt="" width="" height="" class="doctors-row__image">
+                            <img src="src/images/a-kirillova@2x.png" alt="" width="267" height="354" class="doctors-row__image">
                             <div class="doctors-row__info">
                                 <div class="doctors-row__name">
                                     Алина Кириллова
                                 </div>
                                 <div class="doctors-row__text">
-                                    <span class="doctors-row__text_light">Стаж</span> 7 лет
+                                    <span class="text--color-gray">Стаж</span> 7 лет
                                 </div>
                             </div>
                         </div>
                         <div class="doctors-row__block">
-                            <img class="lozad" data-src="src/images/i-andreev@2x.png" alt="" width="" height="" class="doctors-row__image">
+                            <img src="src/images/i-andreev@2x.png" alt="" width="189" height="354" class="doctors-row__image">
                             <div class="doctors-row__info">
                                 <div class="doctors-row__name">
                                     Илья Андреев
                                 </div>
                                 <div class="doctors-row__text">
-                                    <span class="doctors-row__text_light">Стаж</span> 9 лет
+                                    <span class="text--color-gray">Стаж</span> 9 лет
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            ﻿<section class="p-intro">
+            <section class="p-intro">
                 <div class="p-intro__start">
                     <h2 class="p-intro__h2">
                         Добро пожаловать в сеть клиник <span class="text--color-blue">«Медицинские Технологии»</span>
@@ -259,7 +267,7 @@
                     </a>
                 </div>
             </section>
-            ﻿<section class="p-why">
+            <section class="p-why">
                 <h3 class="p-why__h3">
                     Почему стоит к нам обратиться?
                 </h3>
@@ -333,7 +341,7 @@
                     </div>
                 </div>
             </section>
-            ﻿<section class="p-help">
+            <section class="p-help">
                 <h2 class="p-help__h2">
                     Мы поможем вам
                 </h2>
@@ -496,7 +504,7 @@
                     </div>
                 </div>
             </section>
-            ﻿<section class="p-discount">
+            <section class="p-discount">
                 <div class="p-discount__block">
                     <h2 class="p-discount__h2">
                         Получите скидку <span class="text--color-blue">10% на первое посещение</span> любого специалиста
@@ -553,7 +561,7 @@
                     <use xlink:href="#bg-image-center"></use>
                 </svg>
             </section>
-            ﻿<section class="p-doctors">
+            <section class="p-doctors">
                 <h2 class="p-doctors__h2">
                     Наши врачи
                 </h2>
@@ -1486,7 +1494,7 @@
 
                 <a href="" class="p-doctors__button">Смотреть всех врачей</a>
             </section>
-            ﻿<section class="p-possibilities">
+            <section class="p-possibilities">
                 <h2 class="p-possibilities__h2">
                     Возможности клиники
                 </h2>
@@ -1655,7 +1663,7 @@
                     </div>
                 </div>
             </section>
-            ﻿<section class="p-testimonials">
+            <section class="p-testimonials">
                 <h2 class="p-testimonials__h2">
                     Отзывы
                 </h2>
@@ -1791,7 +1799,7 @@
 
                 <a href="" class="p-doctors__button">Читать все отзывы</a>
             </section>
-            ﻿<section class="p-quote">
+            <section class="p-quote">
                 <div class="p-quote__descr">
                     Больше 20 лет практики
                 </div>
@@ -1825,7 +1833,7 @@
                     </div>
                 </div>
             </section>
-            ﻿<section class="p-partners">
+            <section class="p-partners">
                 <h2 class="p-partners__h2">
                     Наши партнёры
                 </h2>
@@ -1979,12 +1987,316 @@
                     </div>
                 </div>
             </section>
+            <section class="p-press">
+                <h2 class="p-press__h2">
+                    Пресс-центр
+                </h2>
+                <div class="p-press__descr">
+                    Будьте в курсе наших новостей
+                </div>
 
+                <div class="p-accordion">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">Новости</div>
+
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="news">
+                                            <img class="lozad" data-src="src/images/press-1@2x.png" alt="" width="" height="" class="news__image">
+                                            <div class="news__title">
+                                                День рождения клиники на Звенигородской!
+                                            </div>
+                                            <div class="news__text">
+                                                Сегодня свой второй день рождения отмечает медицинский центр по адресу 2-я
+                                                Звенигородская ул., д. 13, стр. 40. У клиники сегодня свой второй день рождения
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news">
+                                            <img class="lozad" data-src="src/images/press-2@2x.png" alt="" width="" height="" class="news__image">
+                                            <div class="news__title">
+                                                Новая программа профилактики сердечно-сосудистых заболеваний
+                                            </div>
+                                            <div class="news__text">
+                                                Пациенты могут пройти комплексное обследование, включающее в себя анализы,
+                                                ультразвуковое исследование, ЭКГ и консультацию кардиолога по самым низким ценам
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news">
+                                            <img class="lozad" data-src="src/images/press-3@2x.png" alt="" width="" height="" class="news__image">
+                                            <div class="news__title">
+                                                Программа бесплатных консультаций для всей семьи
+                                            </div>
+                                            <div class="news__text">
+                                                Пациенты смогут получить квалифицированную помощь и рекомендации специалистов по
+                                                широкому спектру заболеваний, не выходя из дома.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next hide-for-small-only"></div>
+                                <div class="swiper-button-prev hide-for-small-only"></div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Статьи</div>
+
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="news">
+                                            <img class="lozad" data-src="src/images/press-1@2x.png" alt="" width="" height="" class="news__image">
+                                            <div class="news__title">
+                                                День рождения клиники на Звенигородской!
+                                            </div>
+                                            <div class="news__text">
+                                                Сегодня свой второй день рождения отмечает медицинский центр по адресу 2-я
+                                                Звенигородская ул., д. 13, стр. 40. У клиники сегодня свой второй день рождения
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news">
+                                            <img class="lozad" data-src="src/images/press-2@2x.png" alt="" width="" height="" class="news__image">
+                                            <div class="news__title">
+                                                Новая программа профилактики сердечно-сосудистых заболеваний
+                                            </div>
+                                            <div class="news__text">
+                                                Пациенты могут пройти комплексное обследование, включающее в себя анализы,
+                                                ультразвуковое исследование, ЭКГ и консультацию кардиолога по самым низким ценам
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news">
+                                            <img class="lozad" data-src="src/images/press-3@2x.png" alt="" width="" height="" class="news__image">
+                                            <div class="news__title">
+                                                Программа бесплатных консультаций для всей семьи
+                                            </div>
+                                            <div class="news__text">
+                                                Пациенты смогут получить квалифицированную помощь и рекомендации специалистов по
+                                                широкому спектру заболеваний, не выходя из дома.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next hide-for-small-only"></div>
+                                <div class="swiper-button-prev hide-for-small-only"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="" class="p-doctors__button">Читать все новости</a>
+            </section>
+            <section class="p-sertificates">
+                <h2 class="p-sertificates__h2">
+                    Сертификаты
+                </h2>
+
+
+                <div class="p-sertificates__row">
+                    <div class="p-sertificates__license">
+                        <div class="p-sertificates__lic-num">
+                            <span>Лицензия</span> #3026
+                        </div>
+                        <div class="p-sertificates__lic-text">
+                            На осуществление медицинской деятельности
+                        </div>
+                        <div class="p-sertificates__series">
+                            <div class="p-sertificates__inner">
+                                <div>Серия</div>
+                                <div>78Л01</div>
+                            </div>
+                            <div class="p-sertificates__inner">
+                                <div>№</div>
+                                <div>0003458</div>
+                            </div>
+                        </div>
+                        <img class="lozad" data-src="src/images/sertificate-bg.svg" alt="" width="" height="" class="p-sertificates__bg">
+                        <img class="lozad" data-src="src/images/sertificate@2x.png" alt="" width="" height="" class="p-sertificates__image">
+                    </div>
+                    <div class="p-sertificates__license">
+                        <div class="p-sertificates__lic-num">
+                            <span>Лицензия</span> #3026
+                        </div>
+                        <div class="p-sertificates__lic-text">
+                            На осуществление медицинской деятельности
+                        </div>
+                        <div class="p-sertificates__series">
+                            <div class="p-sertificates__inner">
+                                <div>Серия</div>
+                                <div>78Л01</div>
+                            </div>
+                            <div class="p-sertificates__inner">
+                                <div>№</div>
+                                <div>0003458</div>
+                            </div>
+                        </div>
+                        <img class="lozad" data-src="src/images/sertificate-bg.svg" alt="" width="" height="" class="p-sertificates__bg">
+                        <img class="lozad" data-src="src/images/sertificate@2x.png" alt="" width="" height="" class="p-sertificates__image">
+                    </div>
+                    <div class="p-sertificates__license">
+                        <div class="p-sertificates__lic-num">
+                            <span>Лицензия</span> #3026
+                        </div>
+                        <div class="p-sertificates__lic-text">
+                            На осуществление медицинской деятельности
+                        </div>
+                        <div class="p-sertificates__series">
+                            <div class="p-sertificates__inner">
+                                <div>Серия</div>
+                                <div>78Л01</div>
+                            </div>
+                            <div class="p-sertificates__inner">
+                                <div>№</div>
+                                <div>0003458</div>
+                            </div>
+                        </div>
+                        <img class="lozad" data-src="src/images/sertificate-bg.svg" alt="" width="" height="" class="p-sertificates__bg">
+                        <img class="lozad" data-src="src/images/sertificate@2x.png" alt="" width="" height="" class="p-sertificates__image">
+                    </div>
+                    <div class="p-sertificates__license">
+                        <div class="p-sertificates__lic-num">
+                            <span>Лицензия</span> #3026
+                        </div>
+                        <div class="p-sertificates__lic-text">
+                            На осуществление медицинской деятельности
+                        </div>
+                        <div class="p-sertificates__series">
+                            <div class="p-sertificates__inner">
+                                <div>Серия</div>
+                                <div>78Л01</div>
+                            </div>
+                            <div class="p-sertificates__inner">
+                                <div>№</div>
+                                <div>0003458</div>
+                            </div>
+                        </div>
+                        <img class="lozad" data-src="src/images/sertificate-bg.svg" alt="" width="" height="" class="p-sertificates__bg">
+                        <img class="lozad" data-src="src/images/sertificate@2x.png" alt="" width="" height="" class="p-sertificates__image">
+                    </div>
+                </div>
+            </section>
         </main>
 
-        ﻿<div>
-            footer here
-        </div>
+        <footer>
+            <div>
+                <div class="p-footer__start">
+                    <svg class="p-footer__logo">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <div class="p-footer__city">
+                        г. Санкт-Петербург:
+                    </div>
+                    <ul class="p-footer__list">
+                        <li>Восстания,
+                            д. 8</li>
+                        <li>Малый проспект, П.С., д. 3</li>
+                        <li>Сантьяго-де-Куба, д. 4, к. 1
+                        </li>
+                    </ul>
+                    <a href="#" class="p-footer__map-link">
+                        <span>Смотреть на карте</span>
+                        <svg class="p-footer__arrow">
+                            <use xlink:href="#arrow-link"></use>
+                        </svg>
+                    </a>
+                    <div class="p-footer__time">
+                        Пн-Вс – 8:00 - 20:00
+                    </div>
+                    <div class="p-socials">
+                        <img class="lozad" data-src="src/images/footer/footer-18.svg" width="" height="" alt="">
+
+                        <img class="lozad" data-src="src/images/footer/social-icon-1.svg" width="" height="" alt="">
+                        <img class="lozad" data-src="src/images/footer/social-icon-vk.svg" width="" height="" alt="">
+                        <img class="lozad" data-src="src/images/footer/social-icon-telegram.svg" width="" height="" alt="">
+                        <img class="lozad" data-src="src/images/footer/social-icon-whatsapp.svg" width="" height="" alt="">
+                        <img class="lozad" data-src="src/images/footer/social-icon-5.svg" width="" height="" alt="">
+                    </div>
+                    <a href="#" class="p-footer__ask">
+                        Задать вопрос
+                    </a>
+                    <div class="p-footer__accessibility">
+                        <span>Версия для слабовидящих</span>
+                        <svg class="p-footer__arrow">
+                            <use xlink:href="#arrow-link"></use>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="p-footer__main">
+                    <li><a href="#">О центре</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Врачи</a></li>
+                    <li><a href="#">Анализы</a></li>
+                    <li><a href="#">Пациентам</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                </ul>
+                <ul class="p-footer__doctors">
+                    <li><a href="#">Косметолог</a></li>
+                    <li><a href="#">Кардиолог</a></li>
+                    <li><a href="#">Дерматолог</a></li>
+                    <li><a href="#">Диетолог</a></li>
+                    <li><a href="#">Гастроэнтеролог</a></li>
+                    <li><a href="#">Гинеколог</a></li>
+                    <li><a href="#">Терапевт</a></li>
+                    <li><a href="#">Эндокринолог</a></li>
+                    <li><a href="#">Пульмонолог</a></li>
+                    <li><a href="#">Иммунолог</a></li>
+                    <li><a href="#">Педиатр</a></li>
+                    <li><a href="#">Ревматолог</a></li>
+                </ul>
+                <div class="p-footer__info">
+                    <div class="p-footer__tel">
+                        +7 911 210-02-87
+                    </div>
+                    <p>
+                        Есть противопоказания, необходима консультация специалиста. Не оферта. Окончательную стоимость услуг уточнять по телефону
+                    </p>
+                    <p>
+                        Скачайте наше приложение, в котором вы сможете записываться на прием, получать результаты анализов и обследований и оплачивать услуги онлайн.
+                    </p>
+                    <div class="p-footer__download">
+                        <img class="lozad" data-src="src/images/footer/download-appstore.svg" width="" height="" alt="">
+                        <img class="lozad" data-src="src/images/footer/download-googleplay.svg" width="" height="" alt="">
+                    </div>
+
+                    <p>
+                        Все материалы данного сайта являются объектами авторского права (в том числе дизайн). Запрещается копирование, распространение (в том числе путем копирования на другие сайты и ресурсы в Интернете) или любое иное использование информации и объектов без предварительного письменного согласия правообладателя. Указание ссылки на источник информации является обязательным.
+                    </p>
+
+                </div>
+            </div>
+
+            <ul class="p-conf-links">
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Пользовательское соглашение</a></li>
+                <li><a href="#">Публичный договор</a></li>
+                <li><a href="#">Лицензия</a></li>
+            </ul>
+            <div class="p-copyright">
+                <div class="p-copyright__company">
+                    ООО «МЕДИЦИНСКИЕ ТЕХНОЛОГИИ» ИНН 7813673213
+                </div>
+                <div class="p-copyright__license">
+                    ЛИЦЕНЗИЯ НА ОСУЩЕСТВЛЕНИЕ МЕДИЦИНСКОЙ ДЕЯТЕЛЬНОСТИ Л041-01148-78/00308130 ОТ 06.09.2023
+                </div>
+                <div class="p-copyright__author">
+                    <span>Разработано в</span>
+                    <img class="lozad" data-src="src/images/footer/logo-belberry.svg" width="" height="" alt="">
+                </div>
+            </div>
+
+            <img class="p-footer__texture lozad" data-src="src/images/footer/texture.png" width="" height="" alt="">
+        </footer>
     </div>
 
     <svg width="0" height="0" class="hidden">
@@ -2026,8 +2338,8 @@
                 </clipPath>
             </defs>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" id="search">
-            <path d="M21 21.0002L16.7 16.7002M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round" />
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" id="search">
+            <path d="M31 31.0002L26.7 26.7002M29 21C29 25.4183 25.4183 29 21 29C16.5817 29 13 25.4183 13 21C13 16.5817 16.5817 13 21 13C25.4183 13 29 16.5817 29 21Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" id="user-icon">
             <path d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13ZM12 13C14.1217 13 16.1566 13.8429 17.6569 15.3431C19.1571 16.8434 20 18.8783 20 21M12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21" stroke="#222222" stroke-linecap="round" stroke-linejoin="round" />
@@ -2088,7 +2400,7 @@
     <!-- Accordion -->
     <script src="output/js/accordion.min.js" type="text/javascript" defer="defer"></script>
 
-    <!-- Lozad -->
+    <!-- LOZAD -->
     <!-- IntersectionObserver polyfill -->
     <script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js" defer="defer"></script>
 

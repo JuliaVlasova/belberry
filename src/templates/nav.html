@@ -1,5 +1,5 @@
-﻿<nav class="header header_dark">
-    <div class="nav-left">
+﻿<nav class="nav">
+    <div class="nav_left">
         <a href="#" class="p-logo">
             <!-- Тут обычно стоит ссылка на домашнюю страницу -->
             <svg class="p-logo__svg">
@@ -8,7 +8,12 @@
         </a>
 
         <div class="nav-buttons">
-            <a href="#" class="nav-buttons__link">О нас</a>
+            <a href="#" class="nav-buttons__link nav-buttons__link_row">
+                <span>О нас</span>
+                <svg class="nav-buttons__arrow">
+                    <use xlink:href="#to-top"></use>
+                </svg>
+            </a>
             <a href="#" class="nav-buttons__link">Услуги</a>
             <a href="#" class="nav-buttons__link">Врачи</a>
             <a href="#" class="nav-buttons__link">Акции</a>
@@ -18,14 +23,14 @@
             <a href="#" class="nav-buttons__link">Контакты</a>
             <a href="#" class="nav-buttons__link nav-buttons__search">
                 <svg class="nav-buttons__search-icon">
-                    <use xlink:href="#search-icon"></use>
+                    <use xlink:href="#search"></use>
                 </svg>
             </a>
             <div class="nav-buttons_close-mobile"></div>
         </div>
     </div>
 
-    <div class="nav-right">
+    <div class="nav_right">
         <div class="nav__info">
             <div class="nav__tel">+7 911 210 02 87</div>
             <div class="nav__schedule">Ежедневно 8:00 - 20:00</div>
