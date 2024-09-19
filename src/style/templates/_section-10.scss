@@ -1,2 +1,6 @@
 @use '../variables/_colors' as *;
 @use '../mixins/mixins' as *;
+
+.p-partners {
+    position: relative;
+}

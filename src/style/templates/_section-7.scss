@@ -1,2 +1,102 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-possibilities {
+  @extend %container-fixed;
+
+  &__h2 {
+    @include heading("3");
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__descr {
+    @include text($size: "md");
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__h3 {
+    @include text($size: "md");
+  }
+
+  .p-possibilities-accordion {
+    min-height: 360px;
+
+    &__left {
+      width: 315px;
+      height: 360px;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid map-get($colors, "color-gark-gray");
+      position: relative;
+      z-index: 2;
+    }
+
+    .accordion {
+      position: relative;
+      margin-top: -272px;
+      margin-left: 20px;
+
+      &-item {
+      }
+
+      &-header {
+        display: table;
+        min-width: 267px;
+        min-height: 44px;
+        text-align: center;
+        padding: 10px 16px;
+        border-radius: 12px;
+        cursor: pointer;
+        background: map-get($colors, "color-gray");
+        margin-bottom: 10px;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.ui-state-active {
+          background: map-get($colors, "color-light-blue");
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            --size: 12px;
+            width: var(--size);
+            height: var(--size);
+            background: map-get($colors, "color-blue");
+            border-radius: 100px;
+          }
+        }
+      }
+
+      &__row {
+        display: flex;
+        gap: 20px;
+      }
+
+      &__image {
+        cursor: zoom-in;
+      }
+
+      .ui-accordion-content {
+        position: absolute;
+        top: -88px;
+        margin-left: 273px;
+        z-index: 1;
+        background: map-get($colors, "color-white");
+        padding: 8px 8px 8px 70px;
+        border: 1px solid map-get($colors, "color-gark-gray");
+        border-radius: 12px;
+        border-left: none;
+        min-height: 360px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}
