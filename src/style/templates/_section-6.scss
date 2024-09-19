@@ -2,7 +2,7 @@
 @use "../mixins/mixins" as *;
 
 .p-doctors {
-  background: map-get($colors, "color-gray") url("../../src/images/texture.png")
+  background: map-get($colors, "color-gray") url("../background/texture-light.png")
     no-repeat right top;
   background-size: cover;
   padding: 60px 0;
@@ -114,7 +114,7 @@
     &__top {
       border-radius: 4px 4px 12px 12px;
       background: map-get($colors, "bg-doctors")
-        url("../../src/images/doctors-bg.svg") no-repeat right top;
+        url("../background/doctors-bg.svg") no-repeat right top;
       background-size: cover;
       position: relative;
       min-height: 300px;
