@@ -1,2 +1,37 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-why {
+  @extend %container-fixed;
+
+  &__h3 {
+    @include text($size: 'md');
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid map-get($colors, "color-gark-gray");
+    padding: 24px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__svg {
+    --size: 48px;
+    width: var(--size);
+    height: var(--size);
+    margin-right: 20px;
+    flex: none;
+  }
+
+  &__tip {
+    @include heading("5");
+    font-family: "stolzl-bold";
+    margin-right: 40px;
+    flex: none;
+    width: 630px;
+  }
+}

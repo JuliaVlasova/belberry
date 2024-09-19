@@ -26,7 +26,7 @@
   }
 
   &__schedule {
-    @include text("main", "xs");
+    @include text($size: 'xs');
   }
 
   &__login {

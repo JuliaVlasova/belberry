@@ -21,7 +21,7 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 40px;
-    @include text("main", "md");
+    @include text($size: 'md');
   }
 
   &__button {
@@ -48,7 +48,7 @@
   }
 
   &__text {
-    @include text("main", "xs");
+    @include text($size: 'xs');
   }
 
   &__info {
@@ -65,21 +65,33 @@
 }
 
 .p-slider {
-    max-width: 264px;
-    min-height: 157px;
+  max-width: 264px;
+  min-height: 157px;
+  border-radius: 12px;
+  background: map-get($colors, "color-white");
+  text-align: center;
+  margin-bottom: 20px;
+
+  .swiper-slide {
     padding: 20px 12px;
-    border-radius: 12px;
-    background: map-get($colors, "color-white");
-    text-align: center;
+  }
 
-    &__icon {
-        --size: 48px;
-        width: var(--size);
-        height: var(--size);
-        margin: 0 auto 12px;
-    }
+  .swiper-pagination-bullet-active {
+    background: map-get($colors, "color-blue");
+  }
 
-    &__text {
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+  }
 
-    }
+  &__icon {
+    --size: 48px;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto 12px;
+  }
 }

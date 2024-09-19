@@ -1,2 +1,53 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-intro {
+  display: flex;
+  gap: 20px;
+  @extend %container-fixed;
+  margin-top: -150px;
+
+  &__start {
+    max-width: 650px;
+    padding: 80px 32px;
+    border-radius: 24px;
+    background: map-get($colors, "color-gray");
+    position: relative;
+    z-index: 2;
+  }
+
+  &__svg {
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    z-index: 1;
+  }
+
+  &__h2 {
+    @include heading("4");
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__button {
+    @extend %button;
+    position: relative;
+    z-index: 2;
+    display: table;
+  }
+
+  &__gallery {
+    max-width: 650px;
+    border-radius: 24px;
+    cursor: zoom-in;
+  }
+}

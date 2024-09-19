@@ -12,7 +12,7 @@ https://www.figma.com/design/eULuJevL2nWjIjSZFz5ZyK/Belberry-%D0%A2%D0%97?node-i
 --------------------------------------
 
 Время выполнения вёрстки: 
-3h + 5h + 4h
+3h + 5h + 4h + 2h
 
 --------------------------------------
 

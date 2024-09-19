@@ -7,8 +7,14 @@
 
 .p-wrapper {
 	background: map-get($colors, 'color-white');
-	overflow: hidden;
 	position: relative;
+}
+
+main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
 }
 
 .text--color-blue {
@@ -18,4 +24,5 @@
 .text--color-gray {
 	color: map-get($colors, 'color-secondary-gray');
 }
+
 
