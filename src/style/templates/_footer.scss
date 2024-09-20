@@ -1,3 +1,208 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
 
+.p-footer {
+  padding: 24px 24px 20px;
+  background: map-get($colors, "color-dark") url("../background/texture.png")
+    no-repeat right top;
+  background-size: cover;
+  color: map-get($colors, "color-white");
+
+  a {
+    color: map-get($colors, "color-white");
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__logo {
+    width: 160px;
+    height: 57px;
+    margin-bottom: 30px;
+  }
+
+  &__city {
+    margin-bottom: 5px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 16px;
+        background: #424847;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 16px;
+        background: #424847;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__map-link {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    @include text($size: "xs");
+    padding: 4px;
+    border-bottom: 1px solid #677371;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__arrow {
+    --size: 12px;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &__time {
+    margin-bottom: 40px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  &__start {
+    width: 315px;
+  }
+
+  &__main {
+    width: 203px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__doctors {
+    width: 203px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include text($size: "xs");
+  }
+
+  &__info {
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__ask {
+    display: block;
+    max-width: 315px;
+    min-height: 44px;
+    background: map-get($colors, "bg-doctors");
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  a.p-footer__ask {
+    color: map-get($colors, "main");
+  }
+
+  &__accessibility {
+    display: block;
+    max-width: 315px;
+    min-height: 44px;
+    color: map-get($colors, "color-white");
+    background: transparent;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid map-get($colors, "color-white");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+
+    .p-footer__arrow {
+      --size: 10px;
+      width: var(--size);
+      height: var(--size);
+    }
+  }
+
+  &__tel {
+    @include heading("5");
+    font-family: "stolzl-bold";
+    margin-bottom: 30px;
+  }
+
+  p {
+    @include text($size: "xs");
+    color: #abb5b4;
+    margin-bottom: 20px;
+  }
+
+  &__download {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.p-socials {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  img {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+ul.p-conf-links {
+  @include text($size: "xs");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4b5353;
+  padding: 20px 0;
+
+  a {
+    color: #abb5b4;
+  }
+}
+
+.p-copyright {
+  @include text($size: "xs");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #abb5b4;
+  padding: 20px 0;
+
+  &__author {
+    color: map-get($colors, "color-white");
+  }
+}

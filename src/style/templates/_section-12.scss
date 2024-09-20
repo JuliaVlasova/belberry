@@ -14,4 +14,112 @@
     display: flex;
     gap: 15px;
   }
+
+  &__image {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+
+  &__button-download {
+    position: absolute;
+    bottom: 17px;
+    left: 30px;
+    display: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: map-get($colors, "color-white");
+    border-radius: 7px;
+    padding: 11px 28px;
+    font-size: 15px;
+    line-height: 23px;
+    color: map-get($colors, "main");
+    z-index: 4;
+
+    @include breakpointUi(lt-md) {
+      padding: 9px 21px;
+      font-size: 14px;
+      line-height: 21px;
+      bottom: 10px;
+      left: 10px;
+    }
+  }
+
+  &__svg {
+    --size: 21px;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &__lic-num {
+    @include heading("5");
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "stolzl-bold";
+    padding-top: 60px;
+  }
+
+  &__lic-text {
+    color: map-get($colors, 'color-darker-gray');
+    text-align: center;
+  }
+
+  &__series {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    gap: 15px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 8px;
+    @include text($size: "xs");
+  }
+
+  &__license {
+    width: 315px;
+    height: 453px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .p-sertificates {
+        &__bg {
+          display: none;
+        }
+
+        &__image {
+          display: block;
+        }
+
+        &__button-download {
+          display: flex;
+        }
+      }
+    }
+  }
 }
