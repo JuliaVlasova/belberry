@@ -1,2 +1,58 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-quote {
+  @extend %container-fixed;
+
+  &__h2 {
+    @include heading("2");
+    margin-bottom: 40px;
+    font-family: "stolzl-bold";
+  }
+
+  &__descr {
+    @include text($size: "md");
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__photo {
+    border-radius: 100%;
+    cursor: zoom-in;
+  }
+
+  &__text {
+    display: flex;
+    gap: 20px;
+    max-width: 750px;
+  }
+
+  &__descr {
+    flex: 1;
+  }
+
+  &__person {
+    display: flex;
+    gap: 20px;
+    max-width: 400px;
+  }
+
+  &__info {
+    margin-top: 20px;
+  }
+
+  &__name {
+    @include text($size: "md");
+    margin-bottom: 10px;
+  }
+
+  &__svg {
+    --size: 80px;
+    width: var(--size);
+    height: var(--size);
+  }
+}

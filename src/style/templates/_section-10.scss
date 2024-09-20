@@ -1,6 +1,114 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+$animation-time: 0.7s;
 
 .p-partners {
+  position: relative;
+
+  &__h2 {
+    @include heading("3");
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__descr {
+    @include text($size: "md");
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .animated-text {
     position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+
+    @include breakpointUi(lt-md) {
+      
+    }
+
+    &__block {
+        width: 203px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: map-get($colors, "color-gray");
+        border-radius: 12px;
+    }
+
+    &__inner {
+      display: flex;
+      gap: 20px;
+
+      &_top {
+        position: relative;
+        transform: none;
+
+        &.animated-text__inner_animated {
+          animation: animate-top-frame $animation-time ease-in-out;
+
+          &.stop-animation {
+            animation-play-state: paused;
+
+            .animated-text__items {
+              animation-play-state: paused;
+            }
+          }
+        }
+      }
+
+      &_bottom {
+        position: relative;
+        transform: none;
+
+        &.animated-text__inner_animated {
+          animation: animate-top-frame $animation-time ease-in-out;
+
+          &.stop-animation {
+            animation-play-state: paused;
+
+            .animated-text__items {
+              animation-play-state: paused;
+            }
+          }
+        }
+      }
+    }
+
+    &__items {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__block {
+      font-size: 120px;
+      line-height: 100px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@keyframes animate-top-frame {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes animate-bottom-frame {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: none;
+  }
 }

@@ -1,2 +1,152 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-press {
+  @extend %container-fixed;
+
+  &__h2 {
+    @include heading("3");
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__descr {
+    @include text($size: "md");
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    @extend %button;
+    display: table;
+    margin: 0 auto;
+  }
+
+  &__accordion {
+    .accordion {
+      min-height: 490px;
+      position: relative;
+      background: map-get($colors, "color-white");
+      border-radius: 12px;
+      padding: 20px;
+
+      .accordion {
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        &-item {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 0;
+
+          &:nth-child(1) {
+            .accordion-header {
+              left: 0;
+            }
+          }
+
+          &:nth-child(2) {
+            .accordion-header {
+              left: 140px;
+            }
+          }
+        }
+
+        &-header {
+          position: absolute;
+          height: 44px;
+          top: -50px;
+          cursor: pointer;
+          height: 44px;
+          padding: 10px 24px;
+          border-radius: 8px;
+
+          &.ui-state-active {
+            background: map-get($colors, "color-gark-gray");
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 286px;
+          height: 44px;
+          background: map-get($colors, "color-white");
+          border-radius: 8px;
+          border: 1px solid map-get($colors, "color-gark-gray");
+        }
+      }
+    }
+  }
+
+  .swiper {
+    .swiper-button-prev {
+      --size: 44px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 8px;
+      background: map-get($colors, "color-gark-gray");
+
+      &:after {
+        @include text("main", "sm");
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+
+        &:after {
+          @include text($style: "color-darker-gray");
+        }
+      }
+    }
+
+    .swiper-button-next {
+      --size: 44px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 8px;
+      background: map-get($colors, "color-gark-gray");
+
+      &:after {
+        @include text("main", "sm");
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+
+        &:after {
+          @include text($style: "color-darker-gray");
+        }
+      }
+    }
+
+    &-slide {
+      width: 427px;
+      min-height: 415px;
+      border-radius: 24px;
+      border: 1px solid map-get($colors, "color-gark-gray");
+      overflow: hidden;
+      padding: 8px;
+    }
+  }
+}
+
+.p-news {
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        @include text($size: "md");
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    &__text {
+        padding: 0 10px;
+    }
+}

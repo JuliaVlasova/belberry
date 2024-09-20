@@ -8,6 +8,24 @@
 }
 
 @font-face {
+  font-family: "stolzl-thin";
+  src: url("../../fonts/stolzl/stolzl_thin-webfont.woff2") format("woff2"),
+    url("../../fonts/stolzl/stolzl_thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "stolzl-light";
+  src: url("../../fonts/stolzl/stolzl_light-webfont.woff2") format("woff2"),
+    url("../../fonts/stolzl/stolzl_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "stolzl-medium";
   src: url("../../fonts/stolzl/stolzl_medium-webfont.woff2") format("woff2"),
     url("../../fonts/stolzl/stolzl_medium-webfont.woff") format("woff");

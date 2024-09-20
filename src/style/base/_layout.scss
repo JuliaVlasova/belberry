@@ -29,6 +29,10 @@ main {
   color: map-get($colors, "color-darker");
 }
 
+.text--color-darker-gray {
+  color: map-get($colors, "color-darker-gray");
+}
+
 .text--color-dark-blue {
   color: map-get($colors, "color-dark-blue");
 }

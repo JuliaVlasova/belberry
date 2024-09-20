@@ -1,9 +1,0 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
-
-.first-screen {
-	.swiper {
-		width: 264px;
-		height: 157px;
-	}
-}
