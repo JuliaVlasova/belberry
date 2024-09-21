@@ -14,12 +14,12 @@
   &__descr {
     @include text($size: "md");
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 110px;
   }
 
   &__h3 {
     @include heading("5");
-    margin-bottom: 30px;
+    margin-bottom: 33px;
     max-width: 572px;
   }
 
@@ -34,8 +34,11 @@
 
     &__row {
       display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
+      gap: 20px;
+      margin-bottom: 15px;
+      padding-right: 13px;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
 
     &__letter {
@@ -45,7 +48,7 @@
     &__list {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 6px;
     }
   }
 
@@ -58,11 +61,11 @@
   }
 
   .p-accordion {
-    min-height: 490px;
+    min-height: 420px;
     position: relative;
     background: map-get($colors, "color-gray");
     border-radius: 12px;
-    padding: 20px;
+    padding: 37px 20px 20px 25px;
 
     .accordion {
       display: flex;
@@ -77,25 +80,25 @@
 
         &:nth-child(1) {
           .accordion-header {
-            left: 0;
+            left: -20px;
           }
         }
 
         &:nth-child(2) {
           .accordion-header {
-            left: 140px;
+            left: 150px;
           }
         }
 
         &:nth-child(3) {
           .accordion-header {
-            left: 300px;
+            left: 314px;
           }
         }
 
         &:nth-child(4) {
           .accordion-header {
-            left: 450px;
+            left: 445px;
           }
         }
       }
@@ -103,7 +106,7 @@
       &-header {
         position: absolute;
         height: 44px;
-        top: -50px;
+        top: -106px;
         cursor: pointer;
         height: 44px;
         padding: 10px 24px;
@@ -116,39 +119,41 @@
 
       .accordion_inner {
         &::before {
-            content: "";
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 286px;
-            height: 44px;
-            background: map-get($colors, "color-white");
-            border-radius: 8px;
-            border: 1px solid map-get($colors, "color-gark-gray");
+          content: "";
+          position: absolute;
+          top: -14px;
+          right: 4px;
+          width: 286px;
+          height: 44px;
+          background: map-get($colors, "color-white");
+          border-radius: 8px;
+          border: 1px solid map-get($colors, "color-gark-gray");
         }
 
         .accordion-item {
           &:nth-child(1) {
             .accordion-header {
-                right: 180px;
+              right: 144px;
             }
           }
 
           &:nth-child(2) {
             .accordion-header {
-              right: 20px;
+              right: 7px;
             }
           }
         }
 
         .accordion-header {
-          top: 20px;
+          min-width: 143px;
+          text-align: center;
+          top: -11px;
           height: 36px;
           display: table;
           left: unset;
           z-index: 3;
           padding: 10px 16px;
-          @include text($size: 'xs');
+          @include text($size: "xs");
         }
       }
     }

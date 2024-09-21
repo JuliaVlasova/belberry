@@ -5,14 +5,16 @@
   @extend %container-fixed;
 
   &__h3 {
-    @include text($size: 'md');
-    margin-bottom: 20px;
+    @include text($size: "md");
+    margin-bottom: 15px;
+    margin-top: 0;
   }
 
   &__row {
     display: flex;
     border-bottom: 1px solid map-get($colors, "color-gark-gray");
-    padding: 24px;
+    padding: 30px 0 20px 0;
+    align-items: center;
 
     &:last-child {
       border-bottom: none;
@@ -30,8 +32,12 @@
   &__tip {
     @include heading("5");
     font-family: "stolzl-bold";
-    margin-right: 40px;
+    margin-right: 84px;
     flex: none;
     width: 630px;
+  }
+
+  &__about {
+    line-height: 23px;
   }
 }
