@@ -18,6 +18,7 @@
 
   &__h3 {
     @include text($size: "md");
+    margin: 0;
   }
 
   .p-possibilities-accordion {
@@ -35,8 +36,45 @@
 
     .accordion {
       position: relative;
-      margin-top: -272px;
-      margin-left: 20px;
+      margin-top: -292px;
+      margin-left: 23px;
+
+      &__title {
+        @include text($size: "md");
+        margin: 16px 0 7px;
+      }
+
+      p {
+        margin: 0 0 12px 0;
+        line-height: 23px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .plus-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 14px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        li {
+          position: relative;
+          padding-left: 20px;
+
+          &::before {
+            content: url("../background/list-plus.svg");
+            width: 12px;
+            height: 11px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
 
       &-header {
         display: table;
@@ -47,7 +85,7 @@
         border-radius: 12px;
         cursor: pointer;
         background: map-get($colors, "color-gray");
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         position: relative;
         z-index: 3;
 
@@ -57,12 +95,13 @@
 
         &.ui-state-active {
           background: map-get($colors, "color-light-blue");
+          padding-left: 37px;
 
           &::before {
             content: "";
             position: absolute;
             top: 15px;
-            left: 20px;
+            left: 41px;
             --size: 12px;
             width: var(--size);
             height: var(--size);
@@ -83,11 +122,11 @@
 
       .ui-accordion-content {
         position: absolute;
-        top: -88px;
+        top: -68px;
         margin-left: 273px;
+        padding: 8px 8px 8px 40px;
         z-index: 1;
         background: map-get($colors, "color-white");
-        padding: 8px 8px 8px 70px;
         border: 1px solid map-get($colors, "color-gark-gray");
         border-radius: 12px;
         border-left: none;

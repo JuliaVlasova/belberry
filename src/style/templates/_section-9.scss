@@ -6,13 +6,13 @@
 
   &__h2 {
     @include heading("2");
-    margin-bottom: 40px;
+    margin-bottom: 63px;
     font-family: "stolzl-bold";
   }
 
   &__descr {
     @include text($size: "md");
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &__row {
@@ -31,8 +31,9 @@
     max-width: 750px;
   }
 
-  &__descr {
+  &__text-descr {
     flex: 1;
+    line-height: 24px;
   }
 
   &__person {
@@ -42,17 +43,18 @@
   }
 
   &__info {
-    margin-top: 20px;
+    margin-top: 22px;
   }
 
   &__name {
     @include text($size: "md");
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   &__svg {
     --size: 80px;
     width: var(--size);
     height: var(--size);
+    margin-top: -9px;
   }
 }

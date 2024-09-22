@@ -58,6 +58,8 @@
     left: 4px;
     bottom: 4px;
     z-index: 1;
+    height: 98%;
+    width: auto;
   }
 
   .p-accordion {
@@ -133,7 +135,7 @@
         .accordion-item {
           &:nth-child(1) {
             .accordion-header {
-              right: 144px;
+              right: 148px;
             }
           }
 
@@ -145,7 +147,7 @@
         }
 
         .accordion-header {
-          min-width: 143px;
+          min-width: 138px;
           text-align: center;
           top: -11px;
           height: 36px;

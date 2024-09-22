@@ -2,7 +2,7 @@
 @use "../mixins/mixins" as *;
 
 .p-footer {
-  padding: 24px 24px 20px;
+  padding: 60px 60px 20px 60px;
   background: map-get($colors, "color-dark") url("../background/texture.png")
     no-repeat right top;
   background-size: cover;
@@ -25,7 +25,7 @@
   }
 
   &__city {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   &__list {
@@ -35,13 +35,13 @@
 
     li {
       position: relative;
-      padding-left: 20px;
+      padding-left: 23px;
 
       &::before {
         content: "";
         position: absolute;
-        left: 0;
-        top: 7px;
+        left: 4px;
+        top: 3px;
         width: 5px;
         height: 16px;
         background: #424847;
@@ -50,8 +50,8 @@
       &::after {
         content: "";
         position: absolute;
-        left: 0;
-        top: 7px;
+        left: 4px;
+        top: 3px;
         background: #424847;
         width: 5px;
         height: 16px;
@@ -65,10 +65,10 @@
     gap: 5px;
     align-items: center;
     @include text($size: "xs");
-    padding: 4px;
+    padding: 4px 0;
     border-bottom: 1px solid #677371;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 4px;
+    margin-bottom: 22px;
   }
 
   &__arrow {
@@ -78,13 +78,13 @@
   }
 
   &__time {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 53px;
   }
 
   &__start {
@@ -95,15 +95,23 @@
     width: 203px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 24px;
+  }
+
+  ul.p-footer__main {
+    margin-top: 23px;
   }
 
   &__doctors {
     width: 203px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 18px;
     @include text($size: "xs");
+  }
+
+  ul.p-footer__doctors {
+    margin-top: 20px;
   }
 
   &__info {
@@ -121,7 +129,7 @@
     padding: 10px 24px;
     border-radius: 8px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   a.p-footer__ask {
@@ -134,15 +142,15 @@
     min-height: 44px;
     color: map-get($colors, "color-white");
     background: transparent;
-    padding: 10px 24px;
+    padding: 10px 24px 10px 32px;
     border-radius: 8px;
-    text-align: center;
     border: 1px solid map-get($colors, "color-white");
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    gap: 15px;
     cursor: pointer;
+    margin-bottom: 15px;
+
 
     .p-footer__arrow {
       --size: 10px;
@@ -154,13 +162,16 @@
   &__tel {
     @include heading("5");
     font-family: "stolzl-bold";
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 12px;
   }
 
   p {
     @include text($size: "xs");
     color: #abb5b4;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    line-height: 17px;
   }
 
   &__download {
@@ -171,12 +182,12 @@
 
 .p-socials {
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 16px;
+  margin-bottom: 24px;
 
   img {
     &:first-child {
-      margin-right: 20px;
+      margin-right: 18px;
     }
   }
 }
@@ -200,7 +211,7 @@ ul.p-conf-links {
   justify-content: space-between;
   align-items: center;
   color: #abb5b4;
-  padding: 20px 0;
+  padding: 33px 0 15px 0;
 
   &__author {
     color: map-get($colors, "color-white");

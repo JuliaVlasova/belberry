@@ -27,17 +27,16 @@ $animation-time: 0.7s;
     overflow: hidden;
 
     @include breakpointUi(lt-md) {
-      
     }
 
     &__block {
-        width: 203px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: map-get($colors, "color-gray");
-        border-radius: 12px;
+      width: 203px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: map-get($colors, "color-gray");
+      border-radius: 12px;
     }
 
     &__inner {
@@ -46,14 +45,13 @@ $animation-time: 0.7s;
 
       &_top {
         position: relative;
-        transform: none;
 
         &.animated-text__inner_animated {
-          animation: animate-top-frame $animation-time ease-in-out;
+          .animated-text__items {
+            animation: animate-text $animation-time linear infinite;
+          }
 
           &.stop-animation {
-            animation-play-state: paused;
-
             .animated-text__items {
               animation-play-state: paused;
             }
@@ -63,14 +61,14 @@ $animation-time: 0.7s;
 
       &_bottom {
         position: relative;
-        transform: none;
 
         &.animated-text__inner_animated {
-          animation: animate-top-frame $animation-time ease-in-out;
+          .animated-text__items {
+            animation: animate-text $animation-time linear infinite;
+            animation-direction: reverse;
+          }
 
           &.stop-animation {
-            animation-play-state: paused;
-
             .animated-text__items {
               animation-play-state: paused;
             }
@@ -93,22 +91,12 @@ $animation-time: 0.7s;
   }
 }
 
-@keyframes animate-top-frame {
+@keyframes animate-text {
   from {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 
   to {
-    transform: none;
-  }
-}
-
-@keyframes animate-bottom-frame {
-  from {
     transform: translateX(-100%);
-  }
-
-  to {
-    transform: none;
   }
 }

@@ -2,7 +2,9 @@
 @use "../mixins/mixins" as *;
 
 .p-press {
-  @extend %container-fixed;
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
 
   &__h2 {
     @include heading("3");
@@ -24,66 +26,88 @@
 
   &__accordion {
     .accordion {
-      min-height: 490px;
+      min-height: 434px;
       position: relative;
       background: map-get($colors, "color-white");
       border-radius: 12px;
       padding: 20px;
+      margin-bottom: 13px;
 
-      .accordion {
-        display: flex;
-        position: relative;
-        z-index: 2;
+      &-item {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
 
-        &-item {
-          position: absolute;
-          width: 100%;
-          left: 0;
-          top: 0;
-
-          &:nth-child(1) {
-            .accordion-header {
-              left: 0;
-            }
-          }
-
-          &:nth-child(2) {
-            .accordion-header {
-              left: 140px;
-            }
+        &:nth-child(1) {
+          .accordion-header {
+            right: 95px;
+            @include text($size: "xs");
           }
         }
 
-        &-header {
-          position: absolute;
-          height: 44px;
-          top: -50px;
-          cursor: pointer;
-          height: 44px;
-          padding: 10px 24px;
-          border-radius: 8px;
-
-          &.ui-state-active {
-            background: map-get($colors, "color-gark-gray");
+        &:nth-child(2) {
+          .accordion-header {
+            right: 5px;
+            @include text($size: "xs");
           }
         }
+      }
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          width: 286px;
-          height: 44px;
-          background: map-get($colors, "color-white");
-          border-radius: 8px;
-          border: 1px solid map-get($colors, "color-gark-gray");
+      &-header {
+        position: absolute;
+        height: 36px;
+        top: -110px;
+        cursor: pointer;
+        padding: 10px 16px;
+        border-radius: 8px;
+        min-width: 82px;
+        text-align: center;
+
+        &.ui-state-active {
+          background: map-get($colors, "color-gark-gray");
         }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -114px;
+        right: 0;
+        width: 185px;
+        height: 44px;
+        background: map-get($colors, "color-white");
+        border-radius: 8px;
+        border: 1px solid map-get($colors, "color-gark-gray");
       }
     }
   }
 
   .swiper {
+    padding: 0 65px;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 65px;
+      background: #fff;
+      position: absolute;
+      left: -1px;
+      top: 0;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 65px;
+      background: #fff;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+
     .swiper-button-prev {
       --size: 44px;
       width: var(--size);
@@ -131,22 +155,30 @@
       border: 1px solid map-get($colors, "color-gark-gray");
       overflow: hidden;
       padding: 8px;
+      background: map-get($colors, 'color-gray');
     }
   }
 }
 
 .p-news {
-    &__image {
-        margin-bottom: 20px;
-    }
+  &__image {
+    margin-bottom: 24px;
+  }
 
-    &__title {
-        @include text($size: "md");
-        margin-bottom: 10px;
-        padding: 0 10px;
-    }
+  &__title {
+    @include text($size: "md");
+    margin-bottom: 10px;
+    padding: 0 13px;
+    line-height: 25px;
+  }
 
-    &__text {
-        padding: 0 10px;
-    }
+  &__text {
+    padding: 0 0 0 13px;
+    line-height: 23px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

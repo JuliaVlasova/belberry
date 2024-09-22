@@ -2,17 +2,17 @@
 @use "../mixins/mixins" as *;
 
 .p-sertificates {
-  @extend %container-fixed;
+  @extend %container-fixed; 
 
   &__h2 {
     @include heading("3");
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     text-align: center;
   }
 
   &__row {
     display: flex;
-    gap: 15px;
+    gap: 20px;
   }
 
   &__image {
@@ -75,22 +75,23 @@
 
   &__lic-num {
     @include heading("5");
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     text-align: center;
     font-family: "stolzl-bold";
-    padding-top: 60px;
+    padding-top: 95px;
   }
 
   &__lic-text {
     color: map-get($colors, 'color-darker-gray');
     text-align: center;
+    padding: 0 32px;
   }
 
   &__series {
     display: flex;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     gap: 15px;
   }
 
