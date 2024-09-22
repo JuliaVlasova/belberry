@@ -108,28 +108,64 @@
     line-height: 20px;
     color: map-get($colors, "main");
 
-    &.nav-buttons__search {
-      padding: 0;
-    }
-
-    &:hover {
+    &:not(.nav-buttons__search):hover {
       color: map-get($colors, "color-white");
       background: map-get($colors, "color-blue");
+    }
+
+    &.nav-buttons__search {
+      padding: 0;
     }
 
     &_row {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 10px;
       white-space: nowrap;
+      cursor: pointer;
+      position: relative;
+
+      .hidden-menu {
+        display: none;
+        position: absolute;
+        width: 300px;
+        height: auto;
+        background: map-get($colors, "color-blue");
+        color: map-get($colors, "color-white");
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        border-radius: 8px;
+
+        a {
+          display: block;
+          margin-bottom: 10px;
+          padding: 0 20px;
+          color: map-get($colors, "color-white");
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &:hover {
+        .nav-buttons__arrow {
+          path {
+            stroke: map-get($colors, "color-white");
+          }
+        }
+
+        .hidden-menu {
+          display: block;
+        }
+      }
     }
   }
 
   &__arrow {
-    --size: 24px;
-    width: var(--size);
-    height: var(--size);
-    transform: rotate(180deg);
+    width: 14px;
+    height: 8px;
   }
 
   &__search-icon {

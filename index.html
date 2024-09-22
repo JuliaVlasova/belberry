@@ -79,12 +79,18 @@
                 </a>
 
                 <div class="nav-buttons">
-                    <a href="#" class="nav-buttons__link nav-buttons__link_row">
+                    <div href="#" class="nav-buttons__link nav-buttons__link_row">
                         <span>О нас</span>
-                        <svg class="nav-buttons__arrow">
-                            <use xlink:href="#to-top"></use>
+                        <svg class="nav-buttons__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L7 7L13 1" stroke="#222222" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </a>
+
+                        <div class="hidden-menu">
+                            <a href="" class="hidden-menu__item">Первый пункт</a>
+                            <a href="" class="hidden-menu__item">Второй пункт</a>
+                            <a href="" class="hidden-menu__item">Третий пункт</a>
+                        </div>
+                    </div>
                     <a href="#" class="nav-buttons__link">Услуги</a>
                     <a href="#" class="nav-buttons__link">Врачи</a>
                     <a href="#" class="nav-buttons__link">Акции</a>
@@ -240,7 +246,7 @@
                         <use xlink:href="#message"></use>
                     </svg>
                 </div>
-                <div class="p-panel__go-to-top-block">
+                <div class="p-panel__go-to-top-block beautiful-scroll">
                     <svg class="p-panel__go-to-top">
                         <use xlink:href="#to-top"></use>
                     </svg>
@@ -2137,12 +2143,16 @@
                 </clipPath>
             </defs>
         </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" id="close-popup">
+            <path d="M22.0014 8L16 14L10 8L8 10L14 16L8 22L10 24L16 18L22.0014 24L24.0014 22L18.0014 16L24.0014 10L22.0014 8Z" fill="#47aeb0" />
+        </symbol>
     </svg>
 
     <script src="output/js/form-validation.min.js" type="text/javascript" defer="defer"></script>
     <script src="output/js/mobile-menu.min.js" type="text/javascript" defer="defer"></script>
     <script src="output/js/animate-pages.min.js" type="text/javascript" defer="defer"></script>
     <script src="output/js/popup.min.js" type="text/javascript" defer="defer"></script>
+    <script src="output/js/go-to-top.min.js" type="text/javascript" defer="defer"></script>
 
     <!-- Swiper library -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>

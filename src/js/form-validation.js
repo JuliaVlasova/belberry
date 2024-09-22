@@ -6,7 +6,7 @@ $(document).ready(function() {
     const noName = "Поле обязательно к заполнению";
     const noTel = "Поле обязательно к заполнению";
     const wrongTel = "Номер введен неверно";
-    const digitsOnlyPattern = /^\+7 \d\d\d \d\d\d-\d\d-\d\d/;
+    const digitsOnlyPattern = /^\+7 \(\d\d\d\) \d\d\d-\d\d-\d\d/;
 
     let validateForm = function() {
         let verify = "";

@@ -1,48 +1,56 @@
-@use '../variables/_colors' as *;
-@use '../mixins/mixins' as *;
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
 
 .popup-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 60;
-	background: #1E1E1E;
-	border: 30px solid #0000001A;
-	display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  background: rgba(30, 30, 30, 0.6);
+  display: none;
+  backdrop-filter: blur(5px);
 }
 
 .body-noscroll {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .popup-overlay_opened {
-	display: block;
+  display: block;
 }
 
 .popup-window {
-	width: 500px;
-	min-height: 528px;
-	padding: 45px 54px 40px 40px;
-	border-radius: 24px;
-	background: linear-gradient(129.19deg, rgba(250, 250, 250, 0.07) -0.77%, rgba(164, 164, 164, 0) 140.72%);
-	box-shadow: 14.22px 15.23px 43.67px 0px #C2C2C20D inset, 0px 65px 130px -5.08px #0000000D;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  padding: 45px 54px 40px 40px;
+  border-radius: 24px;
+  background: map-get($colors, "color-white");
+  box-shadow: 14.22px 15.23px 43.67px 0px #c2c2c20d inset,
+    0px 65px 130px -5.08px #0000000d;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
-	&__close {
-		--size: 32px;
-		width: var(--size);
-		height: var(--size);
-		cursor: pointer;
-		position: absolute;
-		top: 40px;
-		right: 56px;
-	}
+  &__close {
+    --size: 32px;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }
 
-
+.popup-form {
+  &__title {
+    @include heading("3");
+    color: map-get($colors, "color-blue");
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+}
 

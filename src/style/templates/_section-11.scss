@@ -90,7 +90,7 @@
       content: "";
       height: 100%;
       width: 65px;
-      background: #fff;
+      background: map-get($colors, "color-white");;
       position: absolute;
       left: -1px;
       top: 0;
@@ -101,7 +101,7 @@
       content: "";
       height: 100%;
       width: 65px;
-      background: #fff;
+      background: map-get($colors, "color-white");;
       position: absolute;
       right: 0;
       top: 0;
