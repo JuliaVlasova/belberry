@@ -69,46 +69,30 @@
     border-radius: 12px;
     padding: 37px 20px 20px 25px;
 
-    .accordion {
+    .p-accordion__top {
+      list-style-type: none;
       display: flex;
-      position: relative;
-      z-index: 2;
+      gap: 20px;
+      align-items: center;
+      padding: 0;
+    }
 
-      &-item {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
+    .p-accordion__inner-top {
+      padding: none;
+      display: flex;
+      gap: 10px;
+      width: 200px;
+      height: 44px;
+      background: map-get($colors, "color-white");
+      border-radius: 8px;
+      border: 1px solid map-get($colors, "color-dark-gray");
+      padding: 2px;
+      margin-left: auto;
+      list-style-type: none;
+    }
 
-        &:nth-child(1) {
-          .accordion-header {
-            left: -20px;
-          }
-        }
-
-        &:nth-child(2) {
-          .accordion-header {
-            left: 150px;
-          }
-        }
-
-        &:nth-child(3) {
-          .accordion-header {
-            left: 314px;
-          }
-        }
-
-        &:nth-child(4) {
-          .accordion-header {
-            left: 445px;
-          }
-        }
-      }
-
+    .accordion {
       &-header {
-        position: absolute;
-        height: 44px;
-        top: -106px;
         cursor: pointer;
         height: 44px;
         padding: 10px 24px;
@@ -116,46 +100,6 @@
 
         &.ui-state-active {
           background: map-get($colors, "color-dark-gray");
-        }
-      }
-
-      .accordion_inner {
-        &::before {
-          content: "";
-          position: absolute;
-          top: -14px;
-          right: 4px;
-          width: 286px;
-          height: 44px;
-          background: map-get($colors, "color-white");
-          border-radius: 8px;
-          border: 1px solid map-get($colors, "color-dark-gray");
-        }
-
-        .accordion-item {
-          &:nth-child(1) {
-            .accordion-header {
-              right: 148px;
-            }
-          }
-
-          &:nth-child(2) {
-            .accordion-header {
-              right: 7px;
-            }
-          }
-        }
-
-        .accordion-header {
-          min-width: 138px;
-          text-align: center;
-          top: -11px;
-          height: 36px;
-          display: table;
-          left: unset;
-          z-index: 3;
-          padding: 10px 16px;
-          @include text($size: "xs");
         }
       }
     }

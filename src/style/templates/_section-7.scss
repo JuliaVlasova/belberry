@@ -27,6 +27,7 @@
 
   .p-possibilities-accordion {
     min-height: 360px;
+    display: flex;
 
     &__left {
       width: 315px;
@@ -38,11 +39,11 @@
       z-index: 2;
     }
 
-    .accordion {
-      position: relative;
-      margin-top: -292px;
-      margin-left: 23px;
+    .p-accordion__inner-top {
+      padding: 0;
+    }
 
+    .accordion {
       &__title {
         @include text($size: "md");
         margin: 16px 0 7px;
@@ -127,26 +128,25 @@
           display: none;
         }
       }
+    }
 
-      .ui-accordion-content {
+    .ui-widget-content {
+      margin-left: -7px;
+      padding: 8px 8px 8px 40px;
+      z-index: 1;
+      background: map-get($colors, "color-white");
+      border: 1px solid map-get($colors, "color-dark-gray");
+      border-radius: 12px;
+      border-left: none;
+      min-height: 360px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      flex: 1;
+
+      @include breakpointUi(lt-xl) {
         position: absolute;
-        top: -68px;
-        margin-left: 273px;
-        padding: 8px 8px 8px 40px;
-        z-index: 1;
-        background: map-get($colors, "color-white");
-        border: 1px solid map-get($colors, "color-dark-gray");
-        border-radius: 12px;
-        border-left: none;
-        min-height: 360px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-
-        @include breakpointUi(lt-xl) {
-          position: absolute;
-          top: 292px;
-          margin-left: 0;
-        }
+        top: 292px;
+        margin-left: 0;
       }
     }
   }

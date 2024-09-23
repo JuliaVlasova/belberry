@@ -8,7 +8,6 @@
 
   @include breakpointUi(lt-xl) {
     padding: 0 20px 0;
-    margin-bottom: -40px;
   }
 
   @include breakpointUi(lt-md) {
@@ -177,7 +176,7 @@
 
   @include breakpointUi(lt-xl) {
     position: static;
-    margin: 28px auto 0;
+    margin: 28px auto -40px;
     transform: none;
     width: 320px;
     height: 87px;
@@ -281,7 +280,7 @@
       bottom: 5px;
       right: -11px;
       transform: rotate(14deg) scale(1.7);
-      opacity: 0.4;  
+      opacity: 0.4;
     }
   }
 }
