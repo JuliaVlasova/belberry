@@ -7,6 +7,10 @@
   background-size: cover;
   padding: 60px 0;
 
+  @include breakpointUi(lt-xl) {
+    overflow: hidden;
+  }
+
   &__inner { 
     @extend %container-fixed;
   }
@@ -98,7 +102,7 @@
         z-index: 10;
 
         &.ui-state-active {
-          background: map-get($colors, "color-gark-gray");
+          background: map-get($colors, "color-dark-gray");
         }
       }
     }
@@ -196,7 +200,11 @@
     right: 55px;
     top: 30px;
     border-radius: 8px;
-    background: map-get($colors, "color-gark-gray");
+    background: map-get($colors, "color-dark-gray");
+
+    @include breakpointUi(lt-xl) {
+      display: none;
+    }
 
     &:after {
       @include text("main", "sm");
@@ -219,7 +227,11 @@
     top: 30px;
     right: 0;
     border-radius: 8px;
-    background: map-get($colors, "color-gark-gray");
+    background: map-get($colors, "color-dark-gray");
+
+    @include breakpointUi(lt-xl) {
+      display: none;
+    }
 
     &:after {
       @include text("main", "sm");

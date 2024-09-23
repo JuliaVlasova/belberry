@@ -7,7 +7,7 @@
 @mixin breakpointUi($size) {
 
   @if $size == xs {
-    @media screen and (max-width: calc(#{breakpoint.$point--xs - 1}px)) {
+    @media screen and (max-width: #{breakpoint.$point--xs - 1}px) {
       @content;
     }
   } @else if $size == gt-xs {
@@ -17,7 +17,7 @@
   }
 
   @else if $size == sm {
-    @media screen and (min-width: #{breakpoint.$point--xs}px) and (max-width: calc(#{breakpoint.$point--sm - 1}px)) {
+    @media screen and (min-width: #{breakpoint.$point--xs}px) and (max-width: #{breakpoint.$point--sm - 1}px) {
       @content;
     }
   } @else if $size == gt-sm {
@@ -27,11 +27,11 @@
   }
 
   @else if $size == md {
-    @media screen and (min-width: #{breakpoint.$point--sm}px) and (max-width: calc(#{breakpoint.$point--md - 1}px)) {
+    @media screen and (min-width: #{breakpoint.$point--sm}px) and (max-width: #{breakpoint.$point--md - 1}px) {
       @content;
     }
   } @else if $size == lt-md {
-    @media screen and (max-width: calc(#{breakpoint.$point--sm - 1}px)) {
+    @media screen and (max-width: #{breakpoint.$point--sm - 1}px) {
       @content;
     }
   } @else if $size == gt-md {
@@ -41,11 +41,11 @@
   }
 
   @else if $size == lg {
-    @media screen and (min-width: #{breakpoint.$point--md}px) and (max-width: calc(#{breakpoint.$point--lg - 1}px)) {
+    @media screen and (min-width: #{breakpoint.$point--md}px) and (max-width: #{breakpoint.$point--lg - 1}px) {
       @content;
     }
   } @else if $size == lt-lg {
-    @media screen and (max-width: calc(#{breakpoint.$point--md - 1}px)) {
+    @media screen and (max-width: #{breakpoint.$point--md - 1}px) {
       @content;
     }
   } @else if $size == gt-lg {
@@ -59,7 +59,7 @@
       @content;
     }
   } @else if $size == lt-xl {
-    @media screen and (max-width: calc(#{breakpoint.$point--lg - 1}px)) {
+    @media screen and (max-width: #{breakpoint.$point--lg - 1}px) {
       @content;
     }
   }

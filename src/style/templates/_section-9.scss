@@ -18,6 +18,10 @@
   &__row {
     display: flex;
     justify-content: space-between;
+
+    @include breakpointUi(lt-xl) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__photo {

@@ -8,6 +8,10 @@
   background-size: cover;
   color: map-get($colors, "color-white");
 
+  @include breakpointUi(lt-xl) {
+    padding: 20px;
+  }
+
   a {
     color: map-get($colors, "color-white");
   }
@@ -85,10 +89,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 53px;
+
+    @include breakpointUi(lt-xl) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__start {
     width: 315px;
+
+    @include breakpointUi(lt-xl) {
+      grid-column: span 2;
+      width: 100%;
+    }
   }
 
   &__main {
@@ -119,6 +133,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include breakpointUi(lt-xl) {
+      grid-column: span 2;
+      width: 100%;
+    }
   }
 
   &__ask {
@@ -200,6 +219,10 @@ ul.p-conf-links {
   border-bottom: 1px solid #4b5353;
   padding: 20px 0;
 
+  @include breakpointUi(lt-xl) {
+    flex-direction: column;
+  }
+
   a {
     color: #abb5b4;
   }
@@ -212,6 +235,10 @@ ul.p-conf-links {
   align-items: center;
   color: #abb5b4;
   padding: 33px 0 15px 0;
+
+  @include breakpointUi(lt-xl) {
+    flex-direction: column;
+  }
 
   &__author {
     color: map-get($colors, "color-white");

@@ -1,7 +1,7 @@
 ﻿<nav class="nav">
+    <div class="nav-mobile-burger"></div>
     <div class="nav_left">
         <a href="#" class="p-logo">
-            <!-- Тут обычно стоит ссылка на домашнюю страницу -->
             <svg class="p-logo__svg">
                 <use xlink:href="#logo"></use>
             </svg>
@@ -16,9 +16,9 @@
                 </svg>
 
                 <div class="hidden-menu">
-                    <a href="" class="hidden-menu__item">Первый пункт</a>
-                    <a href="" class="hidden-menu__item">Второй пункт</a>
-                    <a href="" class="hidden-menu__item">Третий пункт</a>
+                    <a href="" class="hidden-menu__item">Отзывы</a>
+                    <a href="" class="hidden-menu__item">Новости</a>
+                    <a href="" class="hidden-menu__item">Сотрудничество</a>
                 </div>
             </div>
             <a href="#" class="nav-buttons__link">Услуги</a>
@@ -33,7 +33,21 @@
                     <use xlink:href="#search"></use>
                 </svg>
             </a>
-            <div class="nav-buttons_close-mobile"></div>
+
+            <div class="nav-buttons__info-mobile">
+                <div class="nav__info">
+                    <div class="nav__tel">+7 911 210 02 87</div>
+                    <div class="nav__schedule">Ежедневно 8:00 - 20:00</div>
+                </div>
+                <div class="nav-info-row">
+                    <a class="nav__login" href="#">
+                        <svg class="nav-buttons__user">
+                            <use xlink:href="#user-icon"></use>
+                        </svg>
+                    </a>
+                    <div class="nav__button popup-opener">Записаться</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -50,5 +64,9 @@
         <div class="nav__button popup-opener">Записаться</div>
     </div>
 
-    <div class="nav-mobile-burger"></div>
+    <a href="#" class="nav__block-mobile">
+        <svg class="nav__tel-icon">
+            <use xlink:href="#tel-mobile"></use>
+        </svg>
+    </a>
 </nav>

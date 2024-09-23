@@ -2,7 +2,19 @@
 @use "../mixins/mixins" as *;
 
 .first-screen {
-  background: map-get($colors, "color-gray");
+  background: map-get($colors, "color-gray") url("../background/doctors-bg.svg")
+    no-repeat right top;
+  background-size: cover;
+
+  @include breakpointUi(lt-xl) {
+    padding: 0 20px 60px;
+  }
+
+  @include breakpointUi(lt-md) {
+    background: map-get($colors, "color-gray")
+      url("../background/top-image-mobile@2x.png") no-repeat center top;
+    background-size: 100%;
+  }
 
   &__container {
     max-width: 965px;
@@ -10,6 +22,14 @@
     padding-top: 54px;
     position: relative;
     z-index: 5;
+
+    @include breakpointUi(lt-xl) {
+      margin: 0 auto;
+    }
+
+    @include breakpointUi(lt-md) {
+      padding-top: 117px;
+    }
   }
 
   &__h1 {
@@ -17,6 +37,14 @@
     margin: 0 0 30px;
     @include heading("1");
     font-family: "stolzl-bold";
+
+    @include breakpointUi(lt-xl) {
+    }
+
+    @include breakpointUi(lt-md) {
+      @include heading("1-mobile");
+      margin-bottom: 10px;
+    }
   }
 
   &__descr {
@@ -25,6 +53,11 @@
     text-align: center;
     margin-bottom: 30px;
     @include text($size: "md");
+
+    @include breakpointUi(lt-xl) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__button {
@@ -45,6 +78,10 @@
     position: relative;
     display: flex;
     align-items: flex-end;
+
+    @include breakpointUi(lt-xl) {
+      display: none;
+    }
   }
 
   &__block {
@@ -133,16 +170,38 @@
   transform: translate(-50%, 0);
   z-index: 10;
 
+  @include breakpointUi(lt-xl) {
+    position: static;
+    margin: 20px auto 0;
+    transform: none;
+    width: 320px;
+    height: 87px;
+    border: 1px solid map-get($colors, "color-dark-gray");
+  }
+
   .swiper {
     width: 264px;
     height: 157px;
+
+    @include breakpointUi(lt-xl) {
+      width: 320px;
+      height: 87px;
+    }
   }
 
   .swiper-slide {
     padding: 20px 12px;
+
+    @include breakpointUi(lt-xl) {
+      padding: 16px 12px;
+      overflow: hidden;
+    }
   }
 
-  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
     bottom: 14px;
   }
 
@@ -165,7 +224,7 @@
     border-radius: 2px;
     opacity: 1;
     margin-right: 20px;
-    background: map-get($colors, "color-gark-gray");
+    background: map-get($colors, "color-dark-gray");
 
     i {
       position: absolute;
@@ -175,7 +234,7 @@
       width: 100%;
       height: 3px;
       border-radius: 2px;
-      background: map-get($colors, "color-gark-gray");
+      background: map-get($colors, "color-dark-gray");
     }
 
     b {
@@ -208,6 +267,14 @@
     width: var(--size);
     height: var(--size);
     margin: 0 auto 12px;
+
+    @include breakpointUi(lt-xl) {
+      position: absolute;
+      bottom: 0;
+      right: -8px;
+      transform: rotate(11deg) scale(1.5);
+      opacity: 0.4;
+    }
   }
 }
 

@@ -2,20 +2,22 @@
 
 $heading-color: map-get($colors, "main");
 $heading-font-weight: 400;
-$heading-font-family: 'stolzl-bold', Arial, sans-serif;
+$heading-font-family: "stolzl-bold", Arial, sans-serif;
 
 $heading--font-size: (
-    "1": 88px,
-    "2": 80px,
-    "3": 48px,
-    "4": 32px,
-    "5": 28px,
+  "1": 88px,
+  "2": 80px,
+  "3": 48px,
+  "4": 32px,
+  "5": 28px,
+  "1-mobile": 30px,
 );
 
 $heading--line-heights: (
-    "1": 97px,
-    "2": 80px,
-    "3": 58px,
-    "4": 38px,
-    "5": 34px,
+  "1": 97px,
+  "2": 80px,
+  "3": 58px,
+  "4": 38px,
+  "5": 34px,
+  "1-mobile": 33px,
 );

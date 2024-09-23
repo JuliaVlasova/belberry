@@ -115,7 +115,7 @@
         border-radius: 8px;
 
         &.ui-state-active {
-          background: map-get($colors, "color-gark-gray");
+          background: map-get($colors, "color-dark-gray");
         }
       }
 
@@ -129,7 +129,7 @@
           height: 44px;
           background: map-get($colors, "color-white");
           border-radius: 8px;
-          border: 1px solid map-get($colors, "color-gark-gray");
+          border: 1px solid map-get($colors, "color-dark-gray");
         }
 
         .accordion-item {

@@ -16,6 +16,10 @@ main {
   flex-direction: column;
   gap: 120px;
   padding-bottom: 120px;
+
+  @include breakpointUi(lt-xl) {
+    overflow: hidden;
+  }
 }
 
 .text--color-blue {

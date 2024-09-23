@@ -13,6 +13,18 @@
   &__row {
     display: flex;
     gap: 20px;
+
+    @include breakpointUi(lt-xl) {
+      width: 1340px;
+    }
+  }
+
+  &__slider-mobile {
+    @include breakpointUi(lt-xl) {
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+    }
   }
 
   &__image {
@@ -24,6 +36,10 @@
     left: 0;
     bottom: 0;
     z-index: 3;
+
+    @include breakpointUi(lt-xl) {
+      display: block;
+    }
   }
 
   &__bg {
@@ -34,6 +50,10 @@
     left: 0;
     bottom: 0;
     z-index: 1;
+
+    @include breakpointUi(lt-xl) {
+      display: none;
+    }
   }
 
   &__content {
@@ -58,7 +78,8 @@
     color: map-get($colors, "main");
     z-index: 4;
 
-    @include breakpointUi(lt-md) {
+    @include breakpointUi(lt-xl) {
+      display: flex;
       padding: 9px 21px;
       font-size: 14px;
       line-height: 21px;
