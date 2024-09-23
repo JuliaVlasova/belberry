@@ -7,12 +7,13 @@
   background-size: cover;
 
   @include breakpointUi(lt-xl) {
-    padding: 0 20px 60px;
+    padding: 0 20px 0;
+    margin-bottom: -40px;
   }
 
   @include breakpointUi(lt-md) {
     background: map-get($colors, "color-gray")
-      url("../background/top-image-mobile@2x.png") no-repeat center top;
+      url("../background/top-image-mobile@2x.png") no-repeat center -5px;
     background-size: 100%;
   }
 
@@ -28,7 +29,7 @@
     }
 
     @include breakpointUi(lt-md) {
-      padding-top: 117px;
+      padding-top: 130px;
     }
   }
 
@@ -49,14 +50,14 @@
 
   &__descr {
     max-width: 653px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     text-align: center;
-    margin-bottom: 30px;
     @include text($size: "md");
 
     @include breakpointUi(lt-xl) {
       font-size: 16px;
       line-height: 24px;
+      margin: 0 auto 20px;
     }
   }
 
@@ -64,6 +65,10 @@
     @extend %button;
     margin: 0 auto;
     max-width: 226px;
+
+    @include breakpointUi(lt-md) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -172,11 +177,12 @@
 
   @include breakpointUi(lt-xl) {
     position: static;
-    margin: 20px auto 0;
+    margin: 28px auto 0;
     transform: none;
     width: 320px;
     height: 87px;
     border: 1px solid map-get($colors, "color-dark-gray");
+    overflow: hidden;
   }
 
   .swiper {
@@ -195,6 +201,8 @@
     @include breakpointUi(lt-xl) {
       padding: 16px 12px;
       overflow: hidden;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 
@@ -270,10 +278,10 @@
 
     @include breakpointUi(lt-xl) {
       position: absolute;
-      bottom: 0;
-      right: -8px;
-      transform: rotate(11deg) scale(1.5);
-      opacity: 0.4;
+      bottom: 5px;
+      right: -11px;
+      transform: rotate(14deg) scale(1.7);
+      opacity: 0.4;  
     }
   }
 }

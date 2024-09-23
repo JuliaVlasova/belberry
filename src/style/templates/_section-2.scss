@@ -11,6 +11,7 @@
     flex-direction: column-reverse;
     margin-top: 120px;
     align-items: center;
+    padding: 0 20px;
   }
 
   &__start {
@@ -56,5 +57,22 @@
     max-width: 650px;
     border-radius: 24px;
     cursor: zoom-in;
+
+    img {
+      @include breakpointUi(lt-md) {
+        width: 135%;
+        height: auto;
+        margin-left: -17%;
+      }
+    }
+
+    a {
+      @include breakpointUi(lt-md) {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 16px;
+      }
+    }
   }
 }

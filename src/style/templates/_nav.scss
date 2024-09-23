@@ -19,7 +19,7 @@
   }
 
   @include breakpointUi(lt-xl) {
-    padding: 15px 20px 15px 34px;
+    padding: 15px 20px;
   }
 
   &__block-mobile {
@@ -34,15 +34,6 @@
       justify-content: center;
       border-radius: 8px;
       background: map-get($colors, "color-blue");
-    }
-  }
-
-  &__info-mobile {
-    display: none;
-
-    @include breakpointUi(lt-xl) {
-      display: block;
-      margin: 10px 0 0 0;
     }
   }
 
@@ -150,8 +141,8 @@
     top: 50%;
     width: 16px;
     height: 1px;
-    left: 0;
-    margin-top: -4px;
+    left: 14px;
+    margin-top: -7px;
     transform: translate(0, -50%);
     background: map-get($colors, "main");
     border-radius: 2px;
@@ -164,9 +155,9 @@
     width: 16px;
     height: 1px;
     background: map-get($colors, "main");
-    margin-top: 6px;
+    margin-top: 5px;
     transform: translate(0, -50%);
-    left: 0;
+    left: 14px;
     border-radius: 2px;
   }
 
@@ -188,6 +179,15 @@
 
   @include breakpointUi(lt-xl) {
     display: none;
+  }
+
+  &__info-mobile {
+    display: none;
+
+    @include breakpointUi(lt-xl) {
+      display: block;
+      margin: 10px 0 0 0;
+    }
   }
 
   &__link {
@@ -329,6 +329,9 @@
       bottom: 0;
       padding: 14px 20px 20px 12px;
       z-index: 60;
+      overflow: hidden;
+      overflow-y: auto;
+      padding-bottom: 90px;
     }
   }
 
