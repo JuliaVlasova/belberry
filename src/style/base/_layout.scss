@@ -19,6 +19,8 @@ main {
 
   @include breakpointUi(lt-xl) {
     overflow: hidden;
+    gap: 90px;
+    padding-bottom: 90px;
   }
 }
 

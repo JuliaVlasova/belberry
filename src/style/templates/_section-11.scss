@@ -27,7 +27,7 @@
 
   &__accordion {
     margin-bottom: 32px;
-    
+
     .accordion {
       &-header {
         cursor: pointer;
@@ -137,6 +137,10 @@
       overflow: hidden;
       padding: 8px;
       background: map-get($colors, "color-gray");
+
+      @include breakpointUi(lt-xl) {
+        border-radius: 16px;
+      }
     }
   }
 }

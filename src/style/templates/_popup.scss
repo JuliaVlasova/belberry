@@ -34,6 +34,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
+  @include breakpointUi(lt-xl) {
+    border-radius: 16px;
+  }
+
   &__close {
     --size: 32px;
     width: var(--size);

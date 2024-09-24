@@ -4,10 +4,27 @@
 .p-why {
   @extend %container-fixed;
 
+  @include breakpointUi(lt-xl) {
+    padding: 0 20px;
+  }
+
   &__h3 {
     @include text($size: "md");
     margin-bottom: 15px;
     margin-top: 0;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__list {
+    @include breakpointUi(lt-xl) {
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__row {
@@ -18,6 +35,7 @@
 
     @include breakpointUi(lt-xl) {
       flex-direction: column;
+      padding: 16px 0;
     }
 
     &:last-child {
@@ -43,9 +61,22 @@
     margin-right: 84px;
     flex: none;
     width: 630px;
+
+    @include breakpointUi(lt-xl) {
+      margin-right: 0;
+      width: 100%;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 12px;
+    }
   }
 
   &__about {
     line-height: 23px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 }
