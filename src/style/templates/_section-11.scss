@@ -5,6 +5,7 @@
   max-width: 1450px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 
   &__h2 {
     @include heading("3");
@@ -25,6 +26,8 @@
   }
 
   &__accordion {
+    margin-bottom: 32px;
+    
     .accordion {
       &-header {
         cursor: pointer;
@@ -33,6 +36,10 @@
         min-width: 82px;
         text-align: center;
         @include text($size: "xs");
+
+        a {
+          color: map-get($colors, "main");
+        }
 
         &.ui-state-active {
           background: map-get($colors, "color-dark-gray");
@@ -50,8 +57,10 @@
       border-radius: 8px;
       border: 1px solid map-get($colors, "color-dark-gray");
       padding: 2px;
-      margin-left: auto;
       list-style-type: none;
+      position: absolute;
+      top: 16px;
+      right: 66px;
     }
   }
 

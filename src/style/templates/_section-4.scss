@@ -14,7 +14,7 @@
   &__descr {
     @include text($size: "md");
     text-align: center;
-    margin-bottom: 110px;
+    margin-bottom: 40px;
   }
 
   &__h3 {
@@ -63,32 +63,51 @@
   }
 
   .p-accordion {
-    min-height: 420px;
     position: relative;
-    background: map-get($colors, "color-gray");
-    border-radius: 12px;
-    padding: 37px 20px 20px 25px;
 
     .p-accordion__top {
       list-style-type: none;
       display: flex;
-      gap: 20px;
+      gap: 16px;
       align-items: center;
       padding: 0;
+      margin: 0 0 22px 0;
+    }
+
+    & > .ui-widget-content {
+      background: map-get($colors, "color-gray") url("../background/striped-bg.svg") no-repeat 2px 2px;
+      background-size: 1133px 419px;
+      border-radius: 12px;
+      padding: 37px 20px 42px 25px;
     }
 
     .p-accordion__inner-top {
-      padding: none;
+      background: map-get($colors, "color-white");
+      border: 1px solid map-get($colors, "color-dark-gray");
       display: flex;
       gap: 10px;
-      width: 200px;
+      width: 285px;
       height: 44px;
-      background: map-get($colors, "color-white");
       border-radius: 8px;
-      border: 1px solid map-get($colors, "color-dark-gray");
-      padding: 2px;
-      margin-left: auto;
+      padding: 3px;
       list-style-type: none;
+      position: absolute;
+      right: 24px;
+      top: 90px;
+      margin: 0;
+
+      .accordion-header {
+        height: 36px;
+        padding: 10px 13px;
+        flex: 1;
+        text-align: center;
+      }
+    }
+    
+    &__inner {
+      .accordion-header {
+        @include text($size: "xs");
+      }
     }
 
     .accordion {
@@ -97,6 +116,10 @@
         height: 44px;
         padding: 10px 24px;
         border-radius: 8px;
+
+        a {
+          color: map-get($colors, "main");
+        }
 
         &.ui-state-active {
           background: map-get($colors, "color-dark-gray");

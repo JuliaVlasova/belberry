@@ -272,6 +272,12 @@
 
         .hidden-menu {
           display: block;
+
+          a {
+            @include breakpointUi(lt-xl) {
+              color: map-get($colors, "color-white");
+            }
+          }
         }
       }
     }

@@ -43,42 +43,42 @@
       padding: 0;
     }
 
+    p {
+      margin: 0 0 12px 0;
+      line-height: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .plus-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: url("../background/list-plus.svg");
+          width: 12px;
+          height: 11px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
     .accordion {
       &__title {
         @include text($size: "md");
         margin: 16px 0 7px;
-      }
-
-      p {
-        margin: 0 0 12px 0;
-        line-height: 23px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      .plus-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 0 14px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        li {
-          position: relative;
-          padding-left: 20px;
-
-          &::before {
-            content: url("../background/list-plus.svg");
-            width: 12px;
-            height: 11px;
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
-        }
       }
 
       &-header {
@@ -93,6 +93,10 @@
         margin-bottom: 12px;
         position: relative;
         z-index: 3;
+
+        a {
+          color: map-get($colors, "main");
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -132,7 +136,7 @@
 
     .ui-widget-content {
       margin-left: -7px;
-      padding: 8px 8px 8px 40px;
+      padding: 8px 8px 8px 26px;
       z-index: 1;
       background: map-get($colors, "color-white");
       border: 1px solid map-get($colors, "color-dark-gray");
@@ -144,9 +148,6 @@
       flex: 1;
 
       @include breakpointUi(lt-xl) {
-        position: absolute;
-        top: 292px;
-        margin-left: 0;
       }
     }
   }

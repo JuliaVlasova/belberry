@@ -24,4 +24,10 @@ $(document).ready(function () {
       "ui-tabs": "highlight",
     },
   });
+
+   $("#tabs-doctors").tabs({
+    classes: {
+      "ui-tabs": "highlight",
+    },
+  });
 });

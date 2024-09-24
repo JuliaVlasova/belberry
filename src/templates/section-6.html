@@ -4,269 +4,261 @@
             Наши врачи
         </h2>
 
-        <div class="p-doctors-accordion">
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">Все</div>
-
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Гастроэнтеролог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 8 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        80% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-1@2x.png" alt=""
-                                        width="215" height="300">
+        <div id="tabs-doctors" class="p-doctors-accordion">
+            <ul class="p-accordion__top">
+                <li class="accordion-header"><a href="#all">Все</a></li>
+                <li class="accordion-header"><a href="#doctors-cosmetologists">Косметологи</a></li>
+                <li class="accordion-header"><a href="#doctors-cardiologists">Кардиологи</a></li>
+                <li class="accordion-header"><a href="#doctors-dermatologists">Дерматологи</a></li>
+                <li class="accordion-header"><a href="#doctors-dietologists">Диетологи</a></li>
+                <li class="accordion-header"><a href="#doctors-gastroenterologists">Гастроэнтерологи</a></li>
+                <li class="accordion-header"><a href="#doctors-ginecologists">Гинекологи</a></li>
+                <li class="accordion-header"><a href="#doctors-terapeuts">Терапевты</a></li>
+            </ul>
+            <div id="all">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Гастроэнтеролог
                                 </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Анастасия Романова
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Врач высшей категории
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 1100</strong>₽
-                                    </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 8 лет
                                 </div>
+                                <div class="doctor__recomendations">
+                                    80% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-1@2x.png" alt=""
+                                    width="215" height="300">
                             </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Кардиолог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 12 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        94% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-2@2x.png" alt=""
-                                        width="215" height="300">
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Анастасия Романова
                                 </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Виталий Петров
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Кандидат медицинских наук
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 2000</strong>₽
-                                    </div>
+                                <div class="doctor__experience">
+                                    Врач высшей категории
                                 </div>
-                            </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Косметолог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 7 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        92% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-3@2x.png" alt=""
-                                        width="215" height="300">
-                                </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Алина Кириллова
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Врач высшей категории
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 1700</strong>₽
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Гинеколог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 8 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        80% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-4@2x.png" alt=""
-                                        width="215" height="300">
-                                </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Мария Пожарская
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Врач высшей категории
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 2800</strong>₽
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Гастроэнтеролог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 8 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        80% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-1@2x.png" alt=""
-                                        width="215" height="300">
-                                </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Анастасия Романова
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Врач высшей категории
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 1100</strong>₽
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Кардиолог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 12 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        94% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-2@2x.png" alt=""
-                                        width="215" height="300">
-                                </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Виталий Петров
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Кандидат медицинских наук
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 2000</strong>₽
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Косметолог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 7 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        92% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-3@2x.png" alt=""
-                                        width="215" height="300">
-                                </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Алина Кириллова
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Врач высшей категории
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 1700</strong>₽
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide doctor">
-                                <div class="doctor__top">
-                                    <div class="doctor__who">
-                                        Гинеколог
-                                    </div>
-                                    <div class="doctor__how-long">
-                                        <span class="text--color-dark-gray">Стаж</span> 8 лет
-                                    </div>
-                                    <div class="doctor__recomendations">
-                                        80% <span class="text--color-dark-blue">рекомендаций</span>
-                                    </div>
-
-                                    <img class="doctor__image lozad" data-src="src/images/doctors-4@2x.png" alt=""
-                                        width="215" height="300">
-                                </div>
-                                <div class="doctor__bottom">
-                                    <div class="doctor__name">
-                                        Мария Пожарская
-                                    </div>
-                                    <div class="doctor__experience">
-                                        Врач высшей категории
-                                    </div>
-                                    <div class="doctor__button">
-                                        Записаться <strong>от 2800</strong>₽
-                                    </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 1100</strong>₽
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next hide-for-small-only"></div>
-                        <div class="swiper-button-prev hide-for-small-only"></div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Кардиолог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 12 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    94% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-2@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Виталий Петров
+                                </div>
+                                <div class="doctor__experience">
+                                    Кандидат медицинских наук
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 2000</strong>₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Косметолог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 7 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    92% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-3@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Алина Кириллова
+                                </div>
+                                <div class="doctor__experience">
+                                    Врач высшей категории
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 1700</strong>₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Гинеколог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 8 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    80% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-4@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Мария Пожарская
+                                </div>
+                                <div class="doctor__experience">
+                                    Врач высшей категории
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 2800</strong>₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Гастроэнтеролог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 8 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    80% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-1@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Анастасия Романова
+                                </div>
+                                <div class="doctor__experience">
+                                    Врач высшей категории
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 1100</strong>₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Кардиолог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 12 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    94% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-2@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Виталий Петров
+                                </div>
+                                <div class="doctor__experience">
+                                    Кандидат медицинских наук
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 2000</strong>₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Косметолог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 7 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    92% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-3@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Алина Кириллова
+                                </div>
+                                <div class="doctor__experience">
+                                    Врач высшей категории
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 1700</strong>₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide doctor">
+                            <div class="doctor__top">
+                                <div class="doctor__who">
+                                    Гинеколог
+                                </div>
+                                <div class="doctor__how-long">
+                                    <span class="text--color-dark-gray">Стаж</span> 8 лет
+                                </div>
+                                <div class="doctor__recomendations">
+                                    80% <span class="text--color-dark-blue">рекомендаций</span>
+                                </div>
+
+                                <img class="doctor__image lozad" data-src="src/images/doctors-4@2x.png" alt=""
+                                    width="215" height="300">
+                            </div>
+                            <div class="doctor__bottom">
+                                <div class="doctor__name">
+                                    Мария Пожарская
+                                </div>
+                                <div class="doctor__experience">
+                                    Врач высшей категории
+                                </div>
+                                <div class="doctor__button">
+                                    Записаться <strong>от 2800</strong>₽
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-button-next hide-for-small-only"></div>
+                    <div class="swiper-button-prev hide-for-small-only"></div>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Косметологи</div>
-
-                    <div>Косметологи</div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Кардиологи</div>
-
-                    <div>Косметологи</div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Дерматологи</div>
-
-                    <div>Косметологи</div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Диетологи</div>
-
-                    <div>Косметологи</div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Гастроэнтерологи</div>
-
-                    <div>Косметологи</div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Гинекологи</div>
-
-                    <div>Косметологи</div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">Терапевты</div>
-
-                    <div>Косметологи</div>
-                </div>
+            </div>
+            <div id="doctors-cosmetologists">
+                <div>Косметологи</div>
+            </div>
+            <div id="doctors-cardiologists">
+                <div>Кардиологи</div>
+            </div>
+            <div id="doctors-dermatologists">
+                <div>Дерматологи</div>
+            </div>
+            <div id="doctors-dietologists">
+                <div>Диетологи</div>
+            </div>
+            <div id="doctors-gastroenterologists">
+                <div>Гастроэнтерологи</div>
+            </div>
+            <div id="doctors-ginecologists">
+                <div>Гинекологи</div>
+            </div>
+            <div id="doctors-terapeuts">
+                <div>Терапевты</div>
             </div>
         </div>
 
