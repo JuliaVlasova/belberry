@@ -2,12 +2,18 @@
 @use "../mixins/mixins" as *;
 
 .p-sertificates {
-  @extend %container-fixed; 
+  @extend %container-fixed;
 
   &__h2 {
     @include heading("3");
     margin-bottom: 32px;
     text-align: center;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 24px;
+      line-height: 29px;
+      padding: 0 20px;
+    }
   }
 
   &__row {
@@ -15,7 +21,7 @@
     gap: 20px;
 
     @include breakpointUi(lt-xl) {
-      width: 1340px;
+      padding: 0 20px;
     }
   }
 
@@ -80,11 +86,11 @@
 
     @include breakpointUi(lt-xl) {
       display: flex;
-      padding: 9px 21px;
+      padding: 12px 30px;
       font-size: 14px;
       line-height: 21px;
-      bottom: 10px;
-      left: 10px;
+      bottom: 17px;
+      left: 31px;
     }
   }
 
@@ -103,7 +109,7 @@
   }
 
   &__lic-text {
-    color: map-get($colors, 'color-darker-gray');
+    color: map-get($colors, "color-darker-gray");
     text-align: center;
     padding: 0 32px;
   }
@@ -127,6 +133,10 @@
     height: 453px;
     position: relative;
     cursor: pointer;
+
+    @include breakpointUi(lt-xl) {
+      flex: none;
+    }
 
     &:hover {
       .p-sertificates {

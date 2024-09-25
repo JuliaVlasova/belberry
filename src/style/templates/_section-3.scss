@@ -36,6 +36,7 @@
     @include breakpointUi(lt-xl) {
       flex-direction: column;
       padding: 16px 0;
+      align-items: flex-start;
     }
 
     &:last-child {

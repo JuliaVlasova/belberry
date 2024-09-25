@@ -4,15 +4,31 @@
 .p-quote {
   @extend %container-fixed;
 
+  @include breakpointUi(lt-xl) {
+    padding: 0 20px;
+  }
+
   &__h2 {
     @include heading("2");
     margin-bottom: 63px;
     font-family: "stolzl-bold";
+
+    @include breakpointUi(lt-xl) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
   }
 
   &__descr {
     @include text($size: "md");
     margin-bottom: 25px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 15px;
+      line-height: 23px;
+      margin-bottom: 15px;
+    }
   }
 
   &__row {
@@ -21,38 +37,76 @@
 
     @include breakpointUi(lt-xl) {
       flex-direction: column-reverse;
+      gap: 20px;
     }
   }
 
   &__photo {
     border-radius: 100%;
     cursor: zoom-in;
+
+    img {
+      @include breakpointUi(lt-xl) {
+        --size: 80px;
+        width: var(--size);
+        height: var(--size);
+      }
+    }
   }
 
   &__text {
     display: flex;
     gap: 20px;
     max-width: 750px;
+
+    @include breakpointUi(lt-xl) {
+      display: block;
+    }
   }
 
   &__text-descr {
     flex: 1;
     line-height: 24px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__person {
     display: flex;
     gap: 20px;
     max-width: 400px;
+
+    @include breakpointUi(lt-xl) {
+      align-items: center;
+    }
   }
 
   &__info {
     margin-top: 22px;
+
+    @include breakpointUi(lt-xl) {
+      margin-top: 0;
+    }
   }
 
   &__name {
     @include text($size: "md");
     margin-bottom: 8px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+
+  &__who {
+    @include breakpointUi(lt-xl) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__svg {
@@ -60,5 +114,11 @@
     width: var(--size);
     height: var(--size);
     margin-top: -9px;
+
+    @include breakpointUi(lt-xl) {
+      margin-top: 0;
+      float: right;
+      padding: 10px;
+    }
   }
 }

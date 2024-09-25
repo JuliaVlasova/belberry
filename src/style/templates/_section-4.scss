@@ -9,18 +9,40 @@
     @include heading("3");
     margin-bottom: 20px;
     text-align: center;
+
+    @include breakpointUi(lt-xl) {
+      padding: 0 20px;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 8px;
+    }
   }
 
   &__descr {
     @include text($size: "md");
     text-align: center;
     margin-bottom: 40px;
+
+    @include breakpointUi(lt-xl) {
+      padding: 0 20px;
+      font-size: 15px;
+      line-height: 23px;
+      margin-bottom: 20px;
+    }
   }
 
   &__h3 {
     @include heading("5");
     margin-bottom: 33px;
     max-width: 572px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 20px;
+      max-width: 252px;
+      margin-bottom: 77px;
+    }
   }
 
   .p-alphabet {
@@ -32,6 +54,14 @@
     -moz-column-width: auto;
     column-width: auto;
 
+    @include breakpointUi(lt-xl) {
+      --column: 2;
+    }
+
+    @include breakpointUi(lt-md) {
+      --column: 1;
+    }
+
     &__row {
       display: flex;
       gap: 20px;
@@ -39,6 +69,10 @@
       padding-right: 13px;
       page-break-inside: avoid;
       break-inside: avoid;
+
+      @include breakpointUi(lt-xl) {
+        gap: 13px;
+      }
     }
 
     &__letter {
@@ -72,13 +106,28 @@
       align-items: center;
       padding: 0;
       margin: 0 0 22px 0;
+
+      @include breakpointUi(lt-xl) {
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-left: 20px;
+        margin: 0 0 10px;
+      }
     }
 
     & > .ui-widget-content {
-      background: map-get($colors, "color-gray") url("../background/striped-bg.svg") no-repeat 2px 2px;
+      background: map-get($colors, "color-gray")
+        url("../background/striped-bg.svg") no-repeat 2px 2px;
       background-size: 1133px 419px;
       border-radius: 12px;
       padding: 37px 20px 42px 25px;
+
+      @include breakpointUi(lt-xl) {
+        padding: 20px 20px 42px 20px;
+        margin: 0 20px;
+        background: map-get($colors, "color-gray");
+      }
     }
 
     .p-accordion__inner-top {
@@ -96,6 +145,12 @@
       top: 90px;
       margin: 0;
 
+      @include breakpointUi(lt-xl) {
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 180px;
+      }
+
       .accordion-header {
         height: 36px;
         padding: 10px 13px;
@@ -103,7 +158,7 @@
         text-align: center;
       }
     }
-    
+
     &__inner {
       .accordion-header {
         @include text($size: "xs");

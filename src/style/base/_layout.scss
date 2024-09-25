@@ -8,6 +8,10 @@
 .p-wrapper {
   background: map-get($colors, "color-white");
   position: relative;
+
+  @include breakpointUi(lt-xl) {
+    overflow: hidden;
+  }
 }
 
 main {

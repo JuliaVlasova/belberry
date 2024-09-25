@@ -10,6 +10,11 @@
   gap: 50px;
 
   @include breakpointUi(lt-xl) {
+    width: 90%;
+    gap: 30px;
+  }
+
+  @include breakpointUi(lt-xl) {
     flex-direction: column;
     border-radius: 16px;
   }
@@ -17,15 +22,30 @@
   &__block {
     padding: 24px 20px;
     max-width: 483px;
+
+    @include breakpointUi(lt-xl) {
+      max-width: 100%;
+    }
   }
 
   &__h2 {
     @include heading("5");
     margin-bottom: 10px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
   }
 
   &__descr {
     line-height: 23px;
+
+    @include breakpointUi(lt-xl) {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 }
 
@@ -35,6 +55,11 @@
   background: map-get($colors, "color-gray");
   position: relative;
   flex: 1;
+
+  @include breakpointUi(lt-xl) {
+    padding: 20px;
+    border-radius: 12px;
+  }
 
   &__svg {
     position: absolute;
@@ -52,6 +77,12 @@
     gap: 10px 8px;
     align-items: center;
     grid-template-columns: repeat(5, 120px);
+
+    @include breakpointUi(lt-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__block {
@@ -73,7 +104,7 @@
         content: "";
         position: absolute;
         top: 15px;
-        left: 16px;    
+        left: 16px;
         width: var(--size);
         height: var(--size);
         border-radius: 100%;
