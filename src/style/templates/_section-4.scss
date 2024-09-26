@@ -40,8 +40,20 @@
       font-size: 20px;
       line-height: 26px;
       margin-bottom: 20px;
-      max-width: 252px;
       margin-bottom: 77px;
+    }
+
+    @include breakpointUi(gt-sm) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include breakpointUi(lt-md) {
+      max-width: 400px;
+    }
+
+    @include breakpointUi(xs) {
+      max-width: 252px;
     }
   }
 
@@ -148,7 +160,18 @@
       @include breakpointUi(lt-xl) {
         left: 50%;
         transform: translate(-50%, 0);
-        top: 180px;
+      }
+
+      @include breakpointUi(gt-sm) {
+        top: 115px;
+      }
+
+      @include breakpointUi(lt-md) {
+        top: 138px;
+      }
+
+      @include breakpointUi(xs) {
+        top: 190px;
       }
 
       .accordion-header {

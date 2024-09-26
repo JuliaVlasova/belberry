@@ -113,11 +113,21 @@
     &__link {
         @include text("main", "sm");
         text-decoration: underline;
+
+        @include breakpointUi(lt-md) {
+          font-size: 13px;
+          line-height: 1.5;
+        }
     }
 
     &__text {
       margin-left: 2px;
       margin-top: -2px;
+
+      @include breakpointUi(lt-md) {
+        font-size: 13px;
+        line-height: 1.5;
+      }
     }
 
     &__checkbox {
@@ -151,6 +161,10 @@
 
     &__text_animated {
       animation: change-color 2s;
+
+      .register-form-agree__link {
+        animation: change-color 2s;
+      }
     }
   }
 }

@@ -149,7 +149,7 @@
     .swiper {
       padding: 0 65px;
 
-      @include breakpointUi(lt-md) {
+      @include breakpointUi(lt-xl) {
         padding: 0 20px;
       }
 
@@ -163,7 +163,7 @@
         top: 0;
         z-index: 2;
 
-        @include breakpointUi(lt-md) {
+        @include breakpointUi(lt-xl) {
           display: none;
         }
       }
@@ -178,7 +178,7 @@
         top: 0;
         z-index: 2;
 
-        @include breakpointUi(lt-md) {
+        @include breakpointUi(lt-xl) {
           display: none;
         }
       }
@@ -190,7 +190,7 @@
         border-radius: 8px;
         background: map-get($colors, "color-dark-gray");
 
-        @include breakpointUi(lt-md) {
+        @include breakpointUi(lt-xl) {
           display: none;
         }
 
@@ -214,7 +214,7 @@
         border-radius: 8px;
         background: map-get($colors, "color-dark-gray");
 
-        @include breakpointUi(lt-md) {
+        @include breakpointUi(lt-xl) {
           display: none;
         }
 

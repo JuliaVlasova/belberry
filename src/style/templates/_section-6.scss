@@ -134,19 +134,35 @@
 
     &__bottom {
         padding: 24px 16px 15px;
+
+        @include breakpointUi(lt-xl) {
+          padding: 24px 5px 15px;
+        }
     }
 
     &__name {
       @include text($size: "md");
       margin-bottom: 5px;
+
+      @include breakpointUi(lt-xl) {
+        font-size: 16px;
+      }
     }
 
     &__experience {
       margin-bottom: 20px;
+
+      @include breakpointUi(lt-xl) {
+        font-size: 14px;
+      }
     }
 
     &__button {
       @extend %button-base;
+
+      @include breakpointUi(lt-xl) {
+        padding: 10px 12px;
+      }
 
       strong {
         font-family: "stolzl-bold", Arial, sans-serif;

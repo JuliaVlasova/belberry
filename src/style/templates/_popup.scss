@@ -38,6 +38,11 @@
     border-radius: 16px;
   }
 
+  @include breakpointUi(lt-md) {
+    width: 90%;
+    padding: 20px;
+  }
+
   &__close {
     --size: 32px;
     width: var(--size);
@@ -55,6 +60,11 @@
     color: map-get($colors, "color-blue");
     text-align: center;
     margin: 0 0 20px 0;
+
+    @include breakpointUi(lt-md) {
+      font-size: 24px;
+      line-height: 1.2;
+    }
   }
 }
 
